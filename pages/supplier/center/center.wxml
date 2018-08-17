@@ -1,0 +1,52 @@
+<import src="../../template/imageBe/imageBe.wxml"></import>
+<view class="container">
+    <view bindtap="bindViewTap" class="userinfo background-supplier-userinfo">
+        <image backgroundSize="cover" class="userinfo-face" src="{{userInfo.avatarUrl}}"></image>
+        <view class="userinfo-name">
+      {{userInfo.nickName}}
+      <text class="userinfo-level">[普通等级]</text>
+        </view>
+        <view class="userinfo-time">当前可提现金额（订单完成后可获得）</view>
+        <view class="userinfo-jine">60000.00<text>元</text>
+        </view>
+        <view class="userinfo-recharge">
+            <text>提现</text>
+        </view>
+        <view class="user-balance">
+            <view class="li">
+                <view class="t1">8500.00</view>
+                <view class="t2">累计提现</view>
+            </view>
+            <view class="li">
+                <view class="t1">85000</view>
+                <view class="t2">累计未提现</view>
+            </view>
+            <view class="li">
+                <view class="t1">85000</view>
+                <view class="t2">完成后可提现</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="table-block2">
+    <navigator class="li" hoverClass="other-navigator-hover" url="../withdrawLog/withdrawLog">
+        <view class="icon">
+            <template is="imageBe" data="{{class:'',imgName:'icon_myOrder2.png'}}"></template>
+        </view>
+        <view class="text">
+            <view class="name">提现记录</view>
+            <view class="title">
+                <text class="t1">2,898.30</text>元</view>
+        </view>
+    </navigator>
+    <navigator class="li" hoverClass="other-navigator-hover" url="order_commission/order_commission">
+        <view class="icon">
+            <template is="imageBe" data="{{class:'',imgName:'icon_myOrder2.png'}}"></template>
+        </view>
+        <view class="text">
+            <view class="name">我的订单</view>
+            <view class="title">
+                <text class="t1">37</text>个订单</view>
+        </view>
+    </navigator>
+</view>

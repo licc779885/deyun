@@ -1,0 +1,187 @@
+page {
+    background: #f8f8f8;
+    padding-bottom: 120rpx;
+}
+
+.goods {
+    background: #fff;
+    border-top: 1rpx solid #d9d9d9;
+    border-bottom: 1rpx solid #d9d9d9;
+    padding: 0rpx 20rpx;
+    position: relative;
+    z-index: 2;
+}
+
+.goods .head {
+    line-height: 60rpx;
+    border-bottom: 1rpx solid #d9d9d9;
+}
+
+.goods .li {
+    border-bottom: 1rpx solid #d9d9d9;
+    display: flex;
+    flex-flow: nowrap;
+    padding: 20rpx 0rpx;
+}
+
+.goods .li image {
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.goods .li .text {
+    padding-left: 20rpx;
+    flex: 1;
+}
+
+.goods .li .t1 {
+    line-height: 40rpx;
+    height: 80rpx;
+    font-size: 28rpx;
+    overflow: hidden;
+}
+
+.goods .li .t2 {
+    line-height: 40rpx;
+    height: 40rpx;
+    color: #888;
+}
+
+.goods .li .num {
+    text-align: right;
+    width: 200rpx;
+    line-height: 40rpx;
+}
+
+.goods .li .n1 {
+    font-size: 28rpx;
+}
+
+.goods .input {
+    margin: 20rpx 0rpx 0rpx 0rpx;
+    border: 1rpx solid #d9d9d9;
+    background: #f8f8f8;
+    padding: 20rpx 20rpx;
+    height: 28rpx;
+    line-height: 28rpx;
+}
+
+.goods .bottom {
+    text-align: right;
+    line-height: 80rpx;
+    font-size: 28rpx;
+}
+
+.goods .bottom .s1 {
+    margin: 0rpx 6rpx;
+    color: #F55955;
+    font-weight: bold;
+}
+
+.goods .bottom .s2 {
+    color: #F55955;
+    font-weight: bold;
+}
+
+.inputBox {
+    font-size: 24rpx;
+    background: #fff;
+    padding: 0rpx 20rpx;
+    border-bottom: 1rpx solid #D9D9D9;
+    margin-top: -3rpx;
+}
+
+.inputBox .li {
+    border-top: 1rpx solid #d9d9d9;
+    margin: 0rpx;
+    display: flex;
+    flex-flow: nowrap;
+    align-items: center;
+    padding: 20rpx 0rpx;
+    line-height: 40rpx;
+}
+
+.inputBox .li .ll {
+    flex: 1;
+}
+
+.inputBox .li .t1 {
+    margin-right: 10rpx;
+}
+
+.inputBox .li .t2 {
+    margin-right: 10rpx;
+    color: #f22;
+    font-size: 28rpx;
+}
+
+.inputBox .li .t3 {
+    margin-right: 10rpx;
+    color: #FF9500;
+}
+
+.inputBox .li .rr {
+    text-align: right;
+    flex: 2;
+}
+
+.inputBox .icon {
+    height: 30rpx;
+    display: block;
+    width: 30rpx;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -1rpx;
+    position: fixed;
+    bottom: -1rpx;
+    left: 0rpx;
+    background: #fff;
+    z-index: 100;
+    width: 720rpx;
+    padding: 15rpx 15rpx;
+    border-top: 1rpx solid #d9d9d9;
+}
+
+.footer .text {
+    flex: 1;
+    line-height: 70rpx;
+}
+
+.footer .text .s1 {
+    font-size: 24rpx;
+}
+
+.footer .text .s2 {
+    font-size: 32rpx;
+    color: #f22;
+    margin-right: 5rpx;
+}
+
+.footer .button {
+    flex: 2;
+    text-align: right;
+}
+
+.footer .button .but1,.footer .button .but2 {
+    height: 70rpx;
+    box-sizing: border-box;
+    line-height: 70rpx;
+    padding: 0rpx 20rpx;
+    border-radius: 4rpx;
+    display: inline-block;
+    margin-left: 15rpx;
+}
+
+.footer .button .but1 {
+    border: 1rpx solid #5f6e8b;
+    color: #5f6e8b;
+}
+
+.footer .button .but2 {
+    background: #F55955;
+    border: 1rpx solid #F55955;
+    color: #fff;
+}

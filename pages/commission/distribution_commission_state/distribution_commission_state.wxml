@@ -1,0 +1,56 @@
+<view class="container">
+    <view class="balance">
+        <view class="li">
+            <view class="ll">
+                <text class="t1">{{json_set_texts_commission_ok}}(元)</text>
+            </view>
+            <view class="rr">
+                <text class="t2">单位/元</text>
+            </view>
+        </view>
+        <view class="li">
+            <view class="ll">
+                <text class="t3">{{json_member_commission_ok}}</text>
+            </view>
+            <view class="rr">
+                <navigator class="t4" hoverClass="other-navigator-hover" url="../detail_commission/detail_commission">查看明细</navigator>
+            </view>
+        </view>
+        <view class="li border">
+            <view class="ll">
+                <text class="t5">{{json_set_texts_commission_pay}}:{{json_member_commission_pay}}</text>
+            </view>
+            <view class="rr">
+                <text class="t1"></text>
+            </view>
+        </view>
+    </view>
+    <view class="value">
+        <view class="li">
+            <view class="t1">{{json_set_texts_commission_total}}</view>
+            <view class="t2">{{json_member_commission_total}}</view>
+            <view class="t3">{{json_set_texts_commission}}</view>
+        </view>
+        <view class="li">
+            <view class="t1">已申{{json_set_texts_commission}}</view>
+            <view class="t2">{{json_member_commission_apply}}</view>
+            <view class="t3">{{json_set_texts_commission_apply}}</view>
+        </view>
+        <view class="li">
+            <view class="t1">{{json_set_texts_commission_check}}</view>
+            <view class="t2">{{json_member_commission_check}}</view>
+            <view class="t3">审核通过的{{json_set_texts_commission}}</view>
+        </view>
+        <view class="li" wx:if="{{json_set_settledays_show}}">
+            <view class="t1">{{json_set_texts_commission_lock}}</view>
+            <view class="t2">{{json_member_commission_lock}}</view>
+            <view class="t3">结算期内的{{json_set_texts_commission}}</view>
+        </view>
+        <view class="title" wx:if="{{json_content_settledays_isShow}}">{{json_content_settledays}}</view>
+        <view class="title" wx:if="{{json_content_withdraw_isShow}}">{{json_content_withdraw}}</view>
+        <view class="title" wx:if="{{json_content_consume_withdraw_isShow}}">{{json_content_consume_withdraw}}</view>
+        <view class="title" wx:if="{{json_content_proportion_money_isShow}}">{{json_content_proportion_money}}</view>
+    </view>
+    <view class="b-br"></view>
+    <view bindtap="btnClicked" class="b-button-block button-other-red radius {{cansettle}}" data-state="{{cansettle}}">我要提现</view>
+</view>

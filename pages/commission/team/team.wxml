@@ -1,0 +1,24 @@
+<view class="b-headMenu">
+    <view bindtap="my_team_class_a_clicked" class="li {{my_team_class_a_active}}" hover="true">{{className1}}</view>
+    <view bindtap="my_team_class_b_clicked" class="li {{my_team_class_b_active}}" hover="true">{{className2}}</view>
+    <view bindtap="my_team_class_c_clicked" class="li {{my_team_class_c_active}}" hover="true">{{className3}}</view>
+</view>
+<view class="container customer">
+    <view class="head">
+        <view class="ll">成员信息</view>
+        <view class="rr">{{json_set_texts_commission_team}}</view>
+    </view>
+    <view class="main">
+        <view class="li" wx:for="{{teams}}">
+            <image src="{{item.avatar}}"></image>
+            <view class="text">
+                <view class="t1 text-overHide">{{item.realname}}</view>
+                <view class="t2 text-overHide">{{item.agenttime}}</view>
+            </view>
+            <view class="num">
+                <view class="n1">{{item.commission_total}}</view>
+                <view class="n2">{{item.agentcount}}</view>
+            </view>
+        </view>
+    </view>
+</view>

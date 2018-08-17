@@ -1,0 +1,42 @@
+<view class="ttop">
+    <view class="li">
+        <view class="ll">物流名称</view>
+        <view class="rr">{{company_name}}</view>
+    </view>
+    <view class="li">
+        <view class="ll">运单编号</view>
+        <view class="rr">{{express_sn}}</view>
+    </view>
+    <view class="li">
+        <view class="ll">官方电话</view>
+        <view class="rr">{{tel}}</view>
+    </view>
+</view>
+<view class="b-br"></view>
+<view class="logistics">
+    <view class="head">物流追踪</view>
+    <view class="main" wx:for="{{express_info}}">
+        <view class="li green" wx:if="{{index==0}}">
+            <view class="xian">
+                <view class="icon">
+                    <view class="i"></view>
+                </view>
+            </view>
+            <view class="text">
+                <view class="t1">{{item.context}}</view>
+                <view class="t2">{{item.ftime}}</view>
+            </view>
+        </view>
+        <view class="li" wx:else>
+            <view class="xian">
+                <view class="icon">
+                    <view class="i"></view>
+                </view>
+            </view>
+            <view class="text">
+                <view class="t1">{{item.context}}</view>
+                <view class="t2">{{item.ftime}}</view>
+            </view>
+        </view>
+    </view>
+</view>

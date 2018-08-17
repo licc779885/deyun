@@ -1,0 +1,71 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.8",
+	"appid": "wx9ea340960a451f20",
+	"projectname": "%E5%BE%B7%E4%BA%91%E6%B5%8B%E8%AF%95_%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 2,
+			"list": [
+				{
+					"id": 0,
+					"name": "提现记录",
+					"pathName": "pages/member/balanceLog/balanceLog",
+					"query": "type=withdrawLog"
+				},
+				{
+					"id": 1,
+					"name": "分销推广",
+					"pathName": "pages/commission/commission",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "佣金明细",
+					"pathName": "pages/commission/detail_commission/detail_commission",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "分销中心",
+					"pathName": "pages/commission/commission",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "会员中心",
+					"pathName": "pages/member/index/index",
+					"query": ""
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,118 @@
+page {
+    background: #f8f8f8;
+    padding-bottom: 90rpx;
+}
+
+.addressList {
+}
+
+.addressList .li {
+    padding: 0rpx 20rpx;
+    background: #fff;
+    border-top: 1rpx solid #d9d9d9;
+    border-bottom: 1rpx solid #d9d9d9;
+    margin-bottom: 20rpx;
+    /* display: flex; */
+    flex-flow: nowrap;
+    align-items: center;
+}
+
+.addressList .ll {
+    width: 50rpx;
+    align-items: center;
+    padding-right: 10rpx;
+}
+
+.addressList .cc {
+    flex: 1;
+    width: 100%;
+    margin-bottom:10rpx;
+}
+
+.addressList .rr {
+    width: 100%;
+    overflow:hidden;
+    font-size:30rpx;
+    color:#666;
+}
+.addressList .rr .rr_left{
+  float:left;
+  width:50%;
+}
+.addressList .rr .rr_right{
+  float:right;
+  width:50%;
+  line-height:57rpx;
+  text-align:right;
+  
+}
+.addressList .hh {
+    line-height: 50rpx;
+    font-size:30rpx;
+    color: #414141;
+    padding-top: 10rpx;
+}
+
+.addressList .t1,.addressList .t2 {
+    margin-right: 10rpx;
+    vertical-align: middle;
+}
+
+.addressList .mm {
+    line-height: 40rpx;
+    overflow: hidden;
+    color: #666;
+    padding: 10rpx 0rpx;
+    font-size:26rpx;
+}
+
+.addressList .t10 {
+    background: #f55;
+    color: #fff;
+    padding: 0rpx 10rpx;
+    display: inline-block;
+    margin: 5rpx 10rpx 5rpx 0rpx;
+    font-size: 20rpx;
+    line-height: 30rpx;
+}
+
+.addressList .handle {
+    padding:3rpx 0rpx;
+    height: 60rpx;
+    box-sizing: border-box;
+    margin-left: 20rpx;
+    display:inline-block;
+    
+}
+
+.addressList .handle image {
+    width: 40rpx;
+    height: 40rpx;
+    vertical-align: middle;
+    margin:-5rpx 10rpx 0 0;
+}
+
+checkbox .wx-checkbox-input{
+   border-radius: 50%;
+   width:1.0rem; 
+   height:1.0rem;
+   overflow: hidden;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+   border-color:#149e22;
+   
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   border-radius: 50%;
+   width:1.0rem;
+   height:1.0rem;
+   line-height:1.0rem;
+   text-align: center;
+   font-size:0.8rem;
+   color:#149e22;
+   background: transparent;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}
+
+

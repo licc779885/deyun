@@ -1,0 +1,146 @@
+page {
+    background: #f8f8f8;
+}
+
+.goods .li {
+    border-bottom: 1rpx solid #d9d9d9;
+    display: flex;
+    flex-flow: nowrap;
+    padding: 20rpx 20rpx;
+    background: #fff;
+    overflow: hidden;
+}
+
+.goods image {
+    width: 120rpx;
+    height: 120rpx;
+    overflow: hidden;
+}
+
+.goods .text {
+    padding-left: 20rpx;
+    flex: 1;
+    overflow: hidden;
+}
+
+.goods .t1 {
+    line-height: 40rpx;
+    height: 80rpx;
+    font-size: 28rpx;
+    overflow: hidden;
+}
+
+.goods .t2 {
+    line-height: 40rpx;
+    height: 40rpx;
+    color: #888;
+    overflow: hidden;
+}
+
+.goods .num {
+    text-align: right;
+    width: 200rpx;
+    line-height: 40rpx;
+    overflow: hidden;
+}
+
+.comment {
+    background: #fff;
+    border-bottom: 1rpx solid #d9d9d9;
+    margin-bottom: 20rpx;
+    padding-top: 20rpx;
+}
+
+.comment .top {
+    text-align: center;
+    height: 44rpx;
+    border-bottom: 1rpx solid #f8f8f8;
+    overflow: unset;
+    margin: 0rpx 20rpx;
+}
+
+.comment .top text {
+    text-align: center;
+    height: 88rpx;
+    line-height: 88rpx;
+    background: #fff;
+    padding: 0rpx 30rpx;
+    color: #888;
+}
+
+.goods_title {
+    line-height: 80rpx;
+    background: #fff;
+    text-align: center;
+    border-top: 1rpx solid #d9d9d9;
+    border-bottom: 1rpx solid #d9d9d9;
+}
+
+.evaluate {
+    padding: 60rpx 0rpx 30rpx 0rpx;
+    display: flex;
+    justify-content: center;
+}
+
+.evaluate image {
+    width: 100rpx;
+    height: 100rpx;
+    margin: 0rpx 10rpx;
+}
+
+.textarea {
+    padding: 20rpx;
+}
+
+.textarea textarea {
+    background: #fafafa;
+    border: 1rpx solid #f0f0f0;
+    padding: 10rpx 20rpx;
+    line-height: 40rpx;
+    display: block;
+    width: 710rpx;
+    box-sizing: border-box;
+    height: 140rpx;
+    border-radius: 4rpx;
+}
+
+.b-btn-area {
+    margin-top: -20rpx;
+}
+
+.fen {
+    text-align: center;
+    padding: 0rpx 0rpx 20rpx 0rpx;
+}
+
+.fen .text {
+    display: inline-block;
+    padding: 0rpx 20rpx;
+    border-radius: 4rpx;
+    line-height: 60rpx;
+    color: #fff;
+}
+
+.fen .t0 {
+    background: #999;
+}
+
+.fen .t1 {
+    background: #777;
+}
+
+.fen .t2 {
+    background: #f0ad4e;
+}
+
+.fen .t3 {
+    background: #5bc0de;
+}
+
+.fen .t4 {
+    background: #428bca;
+}
+
+.fen .t5 {
+    background: #d9534f;
+}

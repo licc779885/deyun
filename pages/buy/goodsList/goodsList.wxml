@@ -1,0 +1,36 @@
+<import src="/pages/template/imageBe/imageBe.wxml"></import>
+<view bindtap="_showListType" class="b-dropDownMenu" wx:if="{{!goodsVoid}}">
+    <view class="li">
+        <view class="type">{{typeTitle.title}}</view>
+        <view class="icon">
+            <template is="imageBe" data="{{class:'',imgName:'arrowright.png'}}"></template>
+        </view>
+    </view>
+</view>
+<scroll-view bindscrolltolower="lower" scrollTop="{{scrollTop}}" scrollY="true" style="height: 100%;">
+    <view class="b-altText" wx:if="{{goodsVoid}}">
+        <template is="imageBe" data="{{class:'',imgName:'icon_void.png'}}"></template>
+        <view class="te1">里面什么也没有哦~</view>
+        <view class="te2">去试试其他的吧!</view>
+    </view>
+    <view class="b-goodsList" wx:if="{{!goodsVoid}}">
+        <view class="main">
+            <navigator class="li" hoverClass="other-navigator-hover" id="{{item.id}}" url="../../detail/detail?id={{item.id}}" wx:for="{{goodsData}}">
+                <image class="img1" mode="widthFix" src="{{item.thumb}}"></image>
+                <view class="name">
+                    <text>{{item.title}}</text>
+                </view>
+                <view class="Price">
+                    <text class="s1">￥{{item.marketprice}}</text>
+                    <text class="s2">￥{{item.productprice}}</text>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <view wx:if="{{adding}}">
+        <view class="b-p text-center">加载中...</view>
+    </view>
+    <view wx:if="{{notHave}}">
+        <view class="b-p text-center">没有更多了</view>
+    </view>
+</scroll-view>

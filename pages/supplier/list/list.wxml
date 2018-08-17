@@ -1,0 +1,45 @@
+<view class="container">
+    <view>
+        <image src="{{supplier.logo}}" style="width:100%;"></image>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">TA的店铺</view>
+            <view class="weui-cell__ft "></view>
+        </view>
+        <view bindtap="toTel" class="weui-cell">
+            <view class="weui-cell__bd">{{supplier.mobile}}</view>
+            <view class="weui-cell__ft "></view>
+        </view>
+        <view class="weui-cell">
+            <view class="weui-cell__bd">{{supplier.realname}}</view>
+            <view class="weui-cell__ft "></view>
+        </view>
+    </view>
+    <view class="b-br"></view>
+    <view class="b-altText" wx:if="{{goodsVoid}}">
+        <image backgroundSize="cover" mode="aspectFit" src="/image/icon_void.png"></image>
+        <view class="te1">什么也没找到哦~</view>
+        <view class="te2">去试试其他的吧!</view>
+    </view>
+    <view class="b-goodsList" wx:if="{{!goodsVoid}}">
+        <view class="main">
+            <navigator class="li" hoverClass="other-navigator-hover" id="{{item.goods_id}}" url="../detail/detail?id={{item.goods_id}}" wx:for="{{goodsData}}">
+                <image class="img1" src="{{item.thumb}}"></image>
+                <view class="name">
+                    <text>{{item.title}}</text>
+                </view>
+                <view class="Price">
+                    <text class="s1">￥{{item.price}}</text>
+                    <text class="s2">￥{{item.market_price}}</text>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <view wx:if="{{adding}}">
+        <view class="b-p text-center">加载中...</view>
+    </view>
+    <view wx:if="{{notHave}}">
+        <view class="b-p text-center">没有更多了</view>
+    </view>
+</view>

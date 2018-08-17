@@ -1,0 +1,25 @@
+page {
+}
+
+.b-goodsList.row .main .li {
+    padding: 20rpx 110rpx 20rpx 180rpx;
+}
+
+.b-goodsList.row .del {
+    width: 50rpx;
+    height: 180rpx;
+    position: absolute;
+    padding: 0rpx 20rpx;
+    background: #f0f0f0;
+    border-left: 1rpx solid #d9d9d9;
+    top: -1rpx;
+    right: 0rpx;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+}
+
+.b-goodsList.row .del .imgDel {
+    width: 50rpx;
+    height: 50rpx;
+}

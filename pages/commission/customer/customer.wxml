@@ -1,0 +1,27 @@
+<view class="container customer">
+    <view class="head">
+        <view class="ll">会员信息</view>
+        <view class="rr">TA的消费订单/金额</view>
+    </view>
+    <scroll-view bindscrolltolower="lower" scrollTop="{{scrollTop}}" scrollY="true" style="height: 100%;">
+        <view class="main">
+            <view class="li" wx:for="{{customers}}">
+                <image src="{{item.avatar}}"></image>
+                <view class="text">
+                    <view class="t1 text-overHide">{{item.nickname}}</view>
+                    <view class="t2 text-overHide">注册时间: {{item.createtime}}</view>
+                </view>
+                <view class="num">
+                    <view class="n1">{{item.ordercount}}订单</view>
+                    <view class="n2">{{item.moneycount}}元</view>
+                </view>
+            </view>
+        </view>
+        <view wx:if="{{adding}}">
+            <view class="b-p text-center">加载中...</view>
+        </view>
+        <view wx:if="{{notHave}}">
+            <view class="b-p text-center">没有更多了</view>
+        </view>
+    </scroll-view>
+</view>

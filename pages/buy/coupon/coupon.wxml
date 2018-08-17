@@ -1,0 +1,28 @@
+<view class="container coupon">
+    <view class="main">
+        <view bindtap="selectCoupon" class="li" data-id="{{item.id}}" wx:for="{{dataList}}">
+            <view class="ll">
+                <image mode="widthFix" src="/image/coupon.png"></image>
+            </view>
+            <view class="rr">
+                <view class="r1">{{item.couponname}}</view>
+                <view class="r2">
+                    <block wx:if="{{item.backtype==0}}">
+                        <text class="t1">{{item.backstr}}{{item.deduct}}</text>
+                    </block>
+                    <block wx:elif="{{item.backtype==1}}">
+                        <text class="t1">{{item.discount}}{{item.backstr}}</text>
+                    </block>
+                    <block wx:elif="{{item.backtype==2}}">
+                     <text class="t1">{{item.backstr}}:
+                         <block wx:if="{{item.backmoney}}">返{{item.backmoney}}余额</block>
+                         <block wx:if="{{item.backcredit}}"> 返{{item.backcredit}}积分</block>
+                         <block wx:if="{{item.backredpack}}"> 返{{item.backredpack}}现金</block>
+                     </text>
+                    </block>
+                </view>
+                <view class="r3">有效期:至 {{item.timestr}}</view>
+            </view>
+        </view>
+    </view>
+</view>

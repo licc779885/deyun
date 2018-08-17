@@ -1,0 +1,37 @@
+<import src="../../template/imageBe/imageBe.wxml"></import>
+<view class="goods">
+    <view class="head">订单信息</view>
+    <view class="ul">
+        <view wx:for="{{goodList}}">
+            <view class="li" wx:for="{{item.has_many_order_goods}}">
+                <image backgroundSize="cover" src="{{item.thumb}}"></image>
+                <view class="text">
+                    <view class="t1">{{item.title}}</view>
+                    <view class="t2">规格：{{item.goods_option_title}}</view>
+                </view>
+                <view class="num">
+                    <view class="n1">￥{{item.goods_price}}</view>
+                    <view class="n2">x{{item.total}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="bottom">
+                    合计：
+                    <text class="s2">￥{{totalPrice}}</text>
+    </view>
+</view>
+<view class="b-br"></view>
+<view class="weui-cells__title">代付留言</view>
+<view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+        <view class="weui-cell__bd">
+            <textarea class="weui-textarea" placeholder="{{shareContent}}" style="height: 3.3em"></textarea>
+        </view>
+    </view>
+</view>
+<view class="anotherPay">
+    <view class="">
+        <button class="but" openType="share" type="primary">找小伙伴帮忙付款</button>
+    </view>
+</view>

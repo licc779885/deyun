@@ -1,0 +1,192 @@
+page {
+    background: #f8f8f8;
+}
+
+.logistics {
+    background: #fff;
+}
+
+.logistics .head {
+    border-top: 1rpx solid #d9d9d9;
+    border-bottom: 1rpx solid #d9d9d9;
+    line-height: 80rpx;
+    padding-left: 20rpx;
+}
+
+.logistics .main {
+    margin-top: -1rpx;
+}
+
+.logistics .li {
+    display: flex;
+    align-items: center;
+}
+
+.logistics .text {
+    flex: 1;
+    border-left: 1rpx solid #d9d9d9;
+    padding-left: 50rpx;
+}
+
+.logistics .t1 {
+    border-top: 1rpx solid #d9d9d9;
+    padding-top: 30rpx;
+    font-size: 32rpx;
+}
+
+.logistics .t2 {
+    padding-bottom: 30rpx;
+    color: #888;
+}
+
+.logistics .xian {
+    width: 50rpx;
+    position: relative;
+    z-index: 10;
+    overflow: unset;
+}
+
+.logistics .li .i {
+    width: 30rpx;
+    height: 30rpx;
+    border-radius: 100%;
+    background: #999;
+    border: 5rpx solid #d9d9d9;
+    box-sizing: border-box;
+}
+
+.logistics .icon {
+    width: 50rpx;
+    height: 50rpx;
+    background: #fff;
+    border-radius: 100%;
+    border: 10rpx solid #fff;
+    box-sizing: border-box;
+    margin-left: 25rpx;
+}
+
+.logistics .li.red .i {
+    background: #F55955;
+    border: 5rpx solid #F3B6B5;
+}
+
+.logistics .li.red .t1 {
+    color: #F55955;
+}
+
+.logistics .li.green .i {
+    background: #6CCA98;
+    border: 5rpx solid #CAF6DF;
+}
+
+.logistics .li.green .t1 {
+    color: #6CCA98;
+}
+
+.goods {
+    background: #fff;
+    border-top: 1rpx solid #d9d9d9;
+    border-bottom: 1rpx solid #d9d9d9;
+    padding: 0rpx 20rpx;
+    position: relative;
+    z-index: 2;
+}
+
+.goods .head {
+    line-height: 80rpx;
+    border-bottom: 1rpx solid #d9d9d9;
+}
+
+.goods .li {
+    border-bottom: 1rpx solid #d9d9d9;
+    display: flex;
+    flex-flow: nowrap;
+    padding: 20rpx 0rpx;
+}
+
+.goods .li image {
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.goods .li .text {
+    padding-left: 20rpx;
+    flex: 1;
+}
+
+.goods .li .t1 {
+    line-height: 40rpx;
+    height: 80rpx;
+    font-size: 28rpx;
+    overflow: hidden;
+}
+
+.goods .li .t2 {
+    line-height: 40rpx;
+    height: 40rpx;
+    color: #888;
+}
+
+.goods .li .num {
+    text-align: right;
+    width: 200rpx;
+    line-height: 40rpx;
+}
+
+.goods .li .n1 {
+    font-size: 28rpx;
+}
+
+.goods .input {
+    padding: 20rpx 0rpx;
+    border-bottom: 1rpx solid #d9d9d9;
+}
+
+.goods .input .text {
+    border: 1rpx solid #d9d9d9;
+    background: #f8f8f8;
+    padding: 10rpx 20rpx;
+    height: 28rpx;
+    line-height: 28rpx;
+}
+
+.goods .bottom {
+    text-align: right;
+    line-height: 80rpx;
+    font-size: 28rpx;
+}
+
+.goods .bottom .s1 {
+    margin: 0rpx 6rpx;
+    color: #F55955;
+    font-weight: bold;
+}
+
+.goods .bottom .s2 {
+    color: #F55955;
+    font-weight: bold;
+}
+
+.ttop {
+    background: #fff;
+}
+
+.ttop .li {
+    display: flex;
+    flex-flow: nowrap;
+    align-items: center;
+    padding: 0rpx 20rpx;
+    border-bottom: 1rpx solid #d9d9d9;
+    line-height: 88rpx;
+    height: 88rpx;
+    overflow: hidden;
+}
+
+.ttop .ll {
+    flex: 1;
+}
+
+.ttop .tt {
+    flex: 1;
+    text-align: right;
+}

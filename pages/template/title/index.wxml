@@ -1,0 +1,6 @@
+<template name="title">
+    <view style="background: {{params.bgcolor}}; color:{{params.color}}; textAlign:{{params.align}};padding:5px;" wx:if="{{!params==''}}">
+        <view style="font-size: {{params.fontsize1}};clear:both; float:{{params.align}}" wx:if="{{params.title1}}">{{params.title1}}</view>
+        <view style="font-size: {{params.fontsize2}};clear:both; float:{{params.align}}" wx:if="{{params.title2}}">{{params.title2}}</view>
+    </view>
+</template>

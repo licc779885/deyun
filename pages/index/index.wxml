@@ -1,0 +1,71 @@
+<view class="container" wx:if="{{!isDesigner}}">
+    <navigator class="b-search" hoverClass="other-navigator-hover" url="../search/search">
+        <view class="main">
+            <icon size="12" type="search"></icon>
+            <text class="input1">请输入搜索内容</text>
+        </view>
+    </navigator>
+    <view class="banner">
+        <swiper autoplay="{{autoplay}}" duration="{{duration}}" indicatorDots="{{indicatorDots}}" interval="{{interval}}" vertical="{{vertical}}">
+            <swiper-item wx:for="{{bannerData}}">
+                <image class="slide-image" src="{{item.thumb}}"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="menu">
+        <swiper class="{{menuHeightClass}}" duration="{{duration}}" interval="{{interval}}" vertical="{{vertical}}">
+            <swiper-item wx:for="{{memuData}}">
+                <view>
+                    <view bindtap="goGoodsList" class="li" data-id="{{item.id}}" data-level="{{item.level}}" wx:for="{{item}}">
+                        <image class="image" src="{{item.thumb}}"></image>
+                        <text class="text">{{item.name}}</text>
+                    </view>
+                </view>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="b-br"></view>
+    <view class="b-goodsList">
+        <view class="title">
+            <view class="x">
+                <text class="span">热门商品</text>
+            </view>
+        </view>
+        <view class="main">
+            <view bindtap="goToDetail" class="li" id="{{item.goods_id}}" wx:for="{{goodsData}}">
+                <image class="img1" src="{{item.thumb}}"></image>
+                <view class="name">
+                    <text>{{item.title}}</text>
+                </view>
+                <view class="Price">
+                    <text class="s1">￥{{item.price}}</text>
+                    <text class="s2">￥{{item.market_price}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<block wx:if="{{isDesigner}}">
+    <import src="../template/banner/index.wxml"></import>
+    <import src="../template/search/index.wxml"></import>
+    <import src="../template/menu/index.wxml"></import>
+    <import src="../template/cube/index.wxml"></import>
+    <import src="../template/picture/index.wxml"></import>
+    <import src="../template/goods/index.wxml"></import>
+    <import src="../template/blank/index.wxml"></import>
+    <import src="../template/title/index.wxml"></import>
+    <import src="../template/line/index.wxml"></import>
+    <view class="container">
+        <block wx:for="{{designerItem}}">
+            <template is="banner" data="{{...item}}" wx:if="{{item.temp=='banner'}}"></template>
+            <template is="search" data="{{...item}}" wx:if="{{item.temp=='search'}}"></template>
+            <template is="menu" data="{{...item}}" wx:if="{{item.temp=='menu'}}"></template>
+            <template is="cube" data="{{...item}}" wx:if="{{item.temp=='cube'}}"></template>
+            <template is="picture" data="{{...item}}" wx:if="{{item.temp=='picture'}}"></template>
+            <template is="goods" data="{{...item}}" wx:if="{{item.temp=='goods'}}"></template>
+            <template is="blank" data="{{...item}}" wx:if="{{item.temp=='blank'}}"></template>
+            <template is="title" data="{{...item}}" wx:if="{{item.temp=='title'}}"></template>
+            <template is="line" data="{{...item}}" wx:if="{{item.temp=='line'}}"></template>
+        </block>
+    </view>
+</block>

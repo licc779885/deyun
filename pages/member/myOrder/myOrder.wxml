@@ -1,0 +1,52 @@
+<import src="/pages/template/imageBe/imageBe.wxml"></import>
+<view bindtap="_showSetOrderType" class="b-dropDownMenu">
+    <view class="li">
+        <view class="type">{{typeData.title}}</view>
+        <view class="icon">
+            <template is="imageBe" data="{{class:'',imgName:'arrowright.png'}}"></template>
+        </view>
+    </view>
+</view>
+<view class="b-altText" wx:if="{{myOrderVoid}}">
+    <template is="imageBe" data="{{class:'',imgName:'icon_void.png'}}"></template>
+    <view class="te1">里面什么也没有哦~</view>
+    <view class="te2" bindtap='gotoHome'>去试试其他的吧!</view>
+</view>
+<view class="myOrder" wx:if="{{!myOrderVoid}}">
+    <view class="sub" wx:for="{{orderData}}" wx:for-index="idx">
+        <view class="head">
+            <view class="ll">订单号：{{item.ordersn}}</view>
+            <view class="rr">
+                <text>{{item.statusstr}}</text>
+            </view>
+        </view>
+        <view bindtap="toDetail" class="goods" data-index="{{idx}}" data-item="{{item}}">
+            <view class="li" wx:for="{{item.goods}}">
+                <image backgroundSize="cover" src="{{item.thumb}}"></image>
+                <view class="text">
+                    <view class="t1">{{item.title}}</view>
+                    <view class="t2">规格：{{item.optiontitle}}</view>
+                </view>
+                <view class="num">
+                    <view class="n1">￥{{item.price}}</view>
+                    <view class="n2">x{{item.total}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="bottom">
+      共
+      <text class="b1">{{item.goodscount}}</text>件商品
+      <text class="b2">实付:￥{{item.price}}</text>
+            <text class="b3">运费:￥{{item.dispatchprice}}</text>
+        </view>
+        <view class="button">
+            <text bindtap="submitFn" class="but1" data-api="{{itemName.api}}"  data-id="{{item.id}}" data-index="{{idx}}" data-order="{{item}}" data-type="{{itemName.value}}" wx:for="{{item.button_list}}" wx:for-item="itemName">{{itemName.name}} </text>
+        </view>
+    </view>
+    <view wx:if="{{adding}}">
+        <view class="b-p text-center">加载中...</view>
+    </view>
+    <view wx:if="{{notHave}}">
+        <view class="b-p text-center">没有更多了</view>
+    </view>
+</view>

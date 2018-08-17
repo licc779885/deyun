@@ -1,0 +1,114 @@
+<import src="../template/imageBe/imageBe.wxml"></import>
+<view class="container">
+    <block wx:if="{{commission2_isShow}}" >
+        <view class="userinfo background-supplier-userinfo">
+            <image backgroundSize="cover" class="userinfo-face" src="{{userInfo.avatarUrl}}"></image>
+            <view class="userinfo-name">
+                {{userInfo.nickName}}
+                <text class="userinfo-level">{{commission_level}}</text>
+            </view>
+            <view class="userinfo-time">{{agenttime}}</view>
+            <view bindtap="btnClicked" class="userinfo-recharge can_withdraw" data-state="{{can_withdraw}}">
+                <text>提现</text>
+            </view>
+            <view class="user-balance">
+                <view class="li">
+                    <!-- <view class="t1">推广收入 ￥{{total_income}}</view> -->
+                    <view class='t1'>
+                      <view class='total ft'>{{commission_total}}</view>
+                      <view class='tet'>累计佣金</view>
+                    </view>
+                </view>
+                <view class="li">
+                    <!-- <view bindtap="goIncome" class="t1">收入明细 ></view> -->
+                    <view class='t1'>
+                      <view class='cash ft'>{{commission_ok}}</view>
+                      <view class='tet'>可提现佣金</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class='tuij-list'>
+            <view class='tj-lt' wx:for="{{commissionMenus}}" bindtap ="nagivatetoP" data-id="{{item.id}}">
+                <image src='/image/tj_icon{{item.id}}.jpg'></image>
+                <view class='lt-text'>
+                    <view class='title'>{{item.title}}</view>
+                    <view class='dom'><text class='num'>{{item.value}}</text>{{item.unit}}</view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <block wx:if="{{commission1_isShow}}">
+        <template is="imageBe" data="{{class:'imagesTitle',imgName:'fenxiaoshang.png'}}"></template>
+        <view class="b-altText" style="padding-top:0rpx;padding-bottom:30rpx;" wx:if="{{check_is_show}}">
+            <template is="imageBe" data="{{class:'',imgName:'icon_check.png'}}"></template>
+            <view class="te1">您的申请已经提交，请等待审核！~</view>
+            <view bindtap="isCheck_click" class="te2">
+                    去商城逛逛
+                </view>
+        </view>
+        <block wx:if="{{become1_is_show&&apply_is_show}}">
+            <view class="register">
+                <view class="altText">
+                    <view class="te1">{{centent.title}}</view>
+                    <view class="te2">{{centent.desc}}</view>
+                </view>
+                <view class="input">
+                    <input bindinput="bind_weixin" class="i1" placeholder="请填写你的微信号" type="text"></input>
+                    <input bindinput="bind_realname" class="i1" placeholder="请填写真实姓名，用于结算" type="text"></input>
+                    <input bindinput="bind_mobile" class="i1" placeholder="请填写真实手机号" type="number" value="{{mobile}}"></input>
+                </view>
+                <view class="b-btn-area">
+                    <button bindtap="applyCommission" type="warn">申请成为分销商</button>
+                </view>
+            </view>
+            <view class="b-br"></view>
+        </block>
+        <block wx:if="{{become2_is_show}}">
+            <view class="become">
+                <view class="text">{{centent}}</view>
+                <view bindtap="become2Btn" class="but button-other-red">继续去购物</view>
+            </view>
+            <view class="b-br"></view>
+        </block>
+        <block wx:if="{{become3_is_show}}">
+            <view class="become">
+                <view class="text">{{centent}}</view>
+                <navigator bindtap="become3Btn" class="but button-other-red">继续去购物</navigator>
+            </view>
+            <view class="b-br"></view>
+        </block>
+        <block wx:if="{{become4_is_show}}">
+            <view class="become">
+                <view class="text">{{centent}}</view>
+                <navigator bindtap="become4Btn" class="but button-other-red" data-id="{{become_4_info_3}}" url="url">现在去购买
+                </navigator>
+            </view>
+            <view class="b-br"></view>
+        </block>
+        <view class="privilege" style='display:none;'>
+            <view class="head">推广特权</view>
+            <view class="main">
+                <view class="li">
+                    <template is="imageBe" data="{{class:'image',imgName:'icon_ commission_index1.png'}}"></template>
+                    <view class="text">
+                        <view class="t1">专属二维码</view>
+                        <view class="t2">拥有专属推广二维码，用于推广客户</view>
+                    </view>
+                </view>
+                <view class="li">
+                    <template is="imageBe" data="{{class:'image',imgName:'icon_ commission_index2.png'}}"></template>
+                    <view class="text">
+                        <view class="t1">推广收入</view>
+                        <view class="t2">推广的客户购买商品后，您将获得相应的推广收入</view>
+                    </view>
+                </view>
+                <view class="li">
+                    <view class="t3">
+                        {{json_footer_centent}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

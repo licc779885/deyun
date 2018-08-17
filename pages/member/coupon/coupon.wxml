@@ -1,0 +1,29 @@
+<import src="../../template/imageBe/imageBe.wxml"></import>
+<view class="container coupon">
+    <view class="b-headMenu">
+        <view bindtap="qhType" class="li {{couponState=='wait'}}" data-state="wait">未使用</view>
+        <view bindtap="qhType" class="li {{couponState=='used'}}" data-state="used">已使用</view>
+        <view bindtap="qhType" class="li {{couponState=='past'}}" data-state="past">已过期</view>
+    </view>
+    <view class="b-altText" wx:if="{{state==0}}">
+        <template is="imageBe" data="{{class:'',imgName:'icon_iconfontshuaxin.png'}}"></template>
+        <view class="te1">加载中...</view>
+    </view>
+    <view class="b-altText" wx:if="{{state==1}}">
+        <template is="imageBe" data="{{class:'',imgName:'icon_void.png'}}"></template>
+        <view class="te1">里面什么也没有哦~</view>
+    </view>
+    <view class="main" wx:if="{{state==2}}">
+        <view class="{{couponState}} li" wx:for="{{dataList}}">
+            <image class="image" mode="aspectFit" src="{{item.thumb}}"></image>
+            <view class="rr">
+                <view class="r1 ">{{item.couponname}}</view>
+                <view class="r2 ">
+                    <text class="t1 ">{{item.backstr}}</text>
+                    <text class="t2 ">{{item._backmoney}}</text>
+                </view>
+                <view class="r3 ">有效期：{{item.timestr==' '?'永久 ':item.timestr}}</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,19 @@
+<view class="container customer">
+    <view class="b-headMenu">
+        <view class="li in">全部</view>
+        <view class="li">待审核</view>
+        <view class="li">已打款</view>
+    </view>
+    <view class="main">
+        <view class="li">
+            <view class="text">
+                <view class="t1 text-overHide">编号: CA20161114111345561886</view>
+                <view class="t2 text-overHide">申请结算金额: 10.00打款时间:2016-11-14 11:14</view>
+            </view>
+            <view class="num">
+                <view class="n1">+600.00</view>
+                <view class="n2">已打款</view>
+            </view>
+        </view>
+    </view>
+</view>

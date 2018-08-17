@@ -1,0 +1,19 @@
+<import src="../../template/tableCell/tableCell.wxml"></import>
+<import src="../../template/imageBe/imageBe.wxml"></import>
+<view class="container">
+    <view class="userinfo background-member-userinfo">
+        <view class="t1">￥{{balance}}</view>
+        <view class="t2">当前余额</view>
+    </view>
+    <view class="table-cells">
+        <template is="tableCell" data="{{...recharge}}"></template>
+        <template is="tableCell" data="{{...withdraw}}"></template>
+        <template is="tableCell" data="{{...transfer}}"></template>
+    </view>
+    <view class="b-br"></view>
+    <view class="table-cells">
+        <template is="tableCell" data="{{...rechargeLog}}"></template>
+    </view>
+    <view class="b-br"></view>
+    <view class="b-br"></view>
+</view>

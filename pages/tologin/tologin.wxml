@@ -1,0 +1,17 @@
+<view class="impower_beij"></view>
+<view class="impower_cont">
+    <view class='login_title'>微信授权</view>
+    <view class='login_logo'>
+      <image class="wxapp" src="/image/wxapp.png"/>
+      <view class='login_logo_title'>德云申请获得以下权限</view>
+      <view class='login_logo_list'>
+        <view class='vt'>获取用户头像</view>
+        <view class='vt'>获取用户昵称</view>
+      </view>
+    </view>
+    <view class='loginButton'>
+       <button type='default' class='loginQuxiao login_btn'>取消</button>
+       <button type="primary" wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class=' login_btn'>授权登录</button>
+       <view wx:else class='login_text'>请升级微信版本</view>
+    </view>
+</view>

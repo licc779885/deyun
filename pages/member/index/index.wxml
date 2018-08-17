@@ -1,0 +1,79 @@
+<import src="../../template/tableCell/tableCell.wxml"></import>
+<import src="../../template/imageBe/imageBe.wxml"></import>
+<view class="container">
+    <view class="userinfo background-member-userinfo">
+        <image   backgroundSize="cover" class="userinfo-face" src="{{userInfo.avatarUrl}}"></image>
+        <view class="userinfo-name">{{userInfo.nickName}}</view>
+        <view class="user-balance">
+            <view  class="li" wx:for="{{other}}">
+                <view bindtap="goBalance" data-url="{{item.text}}">
+                    <view class="t1" >{{item.cost}}</view>
+                    <view class="t2">{{item.text}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="b-br"></view>
+    <view class="table-cells">
+        <template is="tableCell" data="{{url:'../myOrder/myOrder?type=all',imageUrl:'icon-iconorder.png',name:'我的订单',title:'查看全部订单',bindtap:''}}"></template>
+    </view>
+    <view class="table-block">
+        <navigator class="li m4" hoverClass="other-navigator-hover" url="../myOrder/myOrder?type=waitPay">
+            <view class="num">{{order_count.wait_pay}}</view>
+            <view class="icon">
+                <template is="imageBe" data="{{class:'',imgName:'icon_myOrder2.png'}}"></template>
+            </view>
+            <view class="name">待付款</view>
+        </navigator>
+        <navigator class="li m4" hoverClass="other-navigator-hover" url="../myOrder/myOrder?type=waitSend">
+            <view class="num">{{order_count.wait_sent}}</view>
+            <view class="icon">
+                <template is="imageBe" data="{{class:'',imgName:'icon_myOrder3.png'}}"></template>
+            </view>
+            <view class="name">待发货</view>
+        </navigator>
+        <navigator class="li m4" hoverClass="other-navigator-hover" url="../myOrder/myOrder?type=waitCollec">
+            <view class="num">{{order_count.wait_delivery}}</view>
+            <view class="icon">
+                <template is="imageBe" data="{{class:'',imgName:'icon_myOrder4.png'}}"></template>
+            </view>
+            <view class="name">待收货</view>
+        </navigator>
+        <navigator class="li m4" hoverClass="other-navigator-hover" url="../myOrder/myOrder?type=waitRefund">
+            <view class="num">{{order_count.wait_refund}}</view>
+            <view class="icon">
+                <template is="imageBe" data="{{class:'',imgName:'icon_myOrder1.png'}}"></template>
+            </view>
+            <view class="name">待退款</view>
+        </navigator>
+    </view>
+    <view class="b-br"></view>
+    <view class="table-cells">
+        <view class="table-block">
+            <navigator class="li m4" wx:if="{{show_bonus.show_bonus_center}}" hoverClass="other-navigator-hover" url="../../bonus/bonus">
+                <view class="icon">
+                    <template is="imageBe" data="{{class:'',imgName:'bonus.png'}}"></template>
+                </view>
+                <view class="name">{{show_bonus.show_bonus_text}}</view>
+            </navigator>
+            <navigator class="li m4" hoverClass="other-navigator-hover" url="../collection/collection">
+                <view class="icon">
+                    <template is="imageBe" data="{{class:'',imgName:'icon_collection.png'}}"></template>
+                </view>
+                <view class="name">我的收藏</view>
+            </navigator>
+            <navigator class="li m4" hoverClass="other-navigator-hover" url="../../buy/addressSelect/addressSelect">
+                <view class="icon">
+                    <template is="imageBe" data="{{class:'',imgName:'icon_address.png'}}"></template>
+                </view>
+                <view class="name">收货地址</view>
+            </navigator>
+            <navigator  wx:if="{{info.is_bind_wxapp==0}}" class="li m4" hoverClass="other-navigator-hover" url="../../member/userSetData/userSetData?type=mobile">
+                <view class="icon">
+                        <image backgroundSize="cover"  mode="aspectFit" src="/image/syn.png"></image>
+                </view>
+                <view class="name">同步数据</view>
+            </navigator>
+        </view>
+    </view>
+</view>

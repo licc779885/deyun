@@ -1,0 +1,11 @@
+<template name="picture">
+    <view class="cube-list">
+        <view class="main">
+            <view class="picture" wx:for="{{data}}">
+                <navigator url="{{item.hrefurl}}">
+                    <image class="img1" mode="widthFix" src="{{item.imgurl}}"></image>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</template>

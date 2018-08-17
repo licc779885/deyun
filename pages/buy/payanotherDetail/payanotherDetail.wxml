@@ -1,0 +1,48 @@
+<import src="../../template/imageBe/imageBe.wxml"></import>
+<view class="weui-cell">
+    <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+        <image src="{{payerImg}}" style="width: 50px; height: 50px; display: block"></image>
+    </view>
+    <view class="weui-cell__bd">
+        <view>{{payerName}}</view>
+        <view style="font-size: 13px;color: #888888;">请您帮忙代付一笔订单</view>
+    </view>
+</view>
+<view class="weui-form-preview">
+    <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">付款金额</view>
+            <view class="weui-form-preview__value_in-hd">¥{{totalPrice}}</view>
+        </view>
+    </view>
+    <view class="goods">
+        <view class="ul">
+            <view wx:for="{{goodList}}">
+                <view class="li" wx:for="{{item.has_many_order_goods}}">
+                    <image backgroundSize="cover" src="{{item.thumb}}"></image>
+                    <view class="text">
+                        <view class="t1">{{item.title}}</view>
+                        <view class="t2">规格：{{item.goods_option_title}}</view>
+                    </view>
+                    <view class="num">
+                        <view class="n1">￥{{item.goods_price}}</view>
+                        <view class="n2">x{{item.total}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="bottom">
+                    合计：
+                    <text class="s2">￥{{totalPrice}}</text>
+        </view>
+    </view>
+</view>
+<view class="weui-cell">
+    <view class="weui-cell__bd">
+        <view>好友代付说明</view>
+        <view style="font-size: 13px;color: #888888;">代付前先电话或当面核实好友身份再代付,避免遇到诈骗行为</view>
+    </view>
+</view>
+<view class="b-btn-area" wx:for="{{buttons}}">
+    <button bindtap="confirm" data-value="{{item.value}}" type="primary">{{item.name}}</button>
+</view>

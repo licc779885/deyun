@@ -1,0 +1,16 @@
+<import src="../../template/imageBe/imageBe.wxml"></import>
+<view class="addressList">
+    <view class="li" wx:for="{{carrier_list}}">
+        <view bindtap="selectAddres" class="ll" data-id="{{item.id}}" wx:if="{{item.id==takePlace_id}}">
+            <icon class="radio" size="20" type="success_circle"></icon>
+        </view>
+        <view bindtap="selectAddres" class="cc" data-id="{{item.id}}">
+            <view class="hh">
+                <text class="t1">{{item.storename}}{{item.tel}}</text>
+                <text class="t2">{{item.address}}</text>
+            </view>
+            <view class="mm">
+                <text class="t10" wx:if="{{item.isdefault==1}}">默认</text>{{item.province+item.city+item.area+item.address}}</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,16 @@
+<view class="box"></view>
+<image class="images" mode="widthFix" src="{{src_image}}"></image>
+<view class="info">
+    <view class="title">
+    {{json_share_title}}
+  </view>
+    <view class="con" wx:for="{{contents}}">
+        <view class="line">
+            <view class="t1">{{item.number}}</view>
+            <view class="t2">
+                <view class="t3">{{item.text}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="info2">{{json_desc}}</view>
+</view>

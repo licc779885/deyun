@@ -1,0 +1,51 @@
+page {
+    background: #f8f8f8;
+}
+
+.btn-area {
+    padding: 0rpx 20rpx;
+}
+.dateBe {
+    position: fixed;
+    bottom: 0rpx;
+    left: -5rpx;
+    width: 760rpx;
+    padding: 0rpx 5rpx;
+    box-sizing: border-box;
+    z-index: 200;
+    font-size: 28rpx;
+    border-top: 1rpx solid #d9d9d9;
+    opacity: 0;
+    transform: translate(-750rpx,0rpx);
+}
+
+.dateBe.true {
+    opacity: 1;
+    transform: translate(0rpx,0rpx);
+}
+
+.dateBe .head {
+    display: flex;
+    flex-flow: nowrap;
+    padding: 0rpx 30rpx;
+    line-height: 80rpx;
+    border-bottom: 1rpx solid #d9d9d9;
+    background: #f8f8f8;
+}
+
+.dateBe .head .ll {
+    flex: 1;
+}
+
+.dateBe .head .rr {
+    text-align: right;
+    flex: 1;
+}
+
+.dateBe .main {
+    background: #f8f8f8;
+}
+
+.dateBe .main view {
+    text-align: center;
+}

@@ -1,0 +1,39 @@
+<import src="../../template/tableCell/tableCell.wxml"></import>
+<import src="../../template/imageBe/imageBe.wxml"></import>
+<view class="container">
+    <view class="userinfo background-member-userinfo">
+        <view class="t1">{{commission_ok}}</view>
+        <view class="t2">可提现佣金</view>
+    </view>
+    <view class="table-cells">
+        <view bindtap="goToWithdrawType" class="table-cell" data-state="{{item.type}}" hoverClass="other-navigator-hover" url="" wx:for="{{buttons}}">
+            <view class="main">
+                <view class="icon">
+                    <template is="imageBe" data="{{class:'',imgName:'icon_erji.png'}}"></template>
+                </view>
+                <view class="name text-overHide">{{item.text}}</view>
+                <view class="title text-overHide"></view>
+                <view class="arrow">
+                    <template is="imageBe" data="{{class:'',imgName:'arrowright.png'}}"></template>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="b-br"></view>
+    <view class="table-cells">
+        <navigator bindtap="" class="table-cell" hoverClass="other-navigator-hover" url="../detail_commission/detail_commission">
+            <view class="main">
+                <view class="icon">
+                    <template is="imageBe" data="{{class:'',imgName:'icon_withdrawLog.png'}}"></template>
+                </view>
+                <view class="name text-overHide">提现记录</view>
+                <view class="title text-overHide"></view>
+                <view class="arrow">
+                    <template is="imageBe" data="{{class:'',imgName:'arrowright.png'}}"></template>
+                </view>
+            </view>
+        </navigator>
+    </view>
+    <view class="b-br"></view>
+    <view class="b-br"></view>
+</view>

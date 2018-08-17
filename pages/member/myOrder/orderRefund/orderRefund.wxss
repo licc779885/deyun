@@ -1,0 +1,22 @@
+.weui-cell {
+    padding: 20rpx 30rpx;
+    background: #fff;
+}
+
+.page__bd_value {
+    text-align: center;
+    line-height: 40rpx;
+    padding: 20rpx 0rpx;
+    color: #f22;
+    font-size: 28rpx;
+    border-bottom: 1rpx solid #d9d9d9;
+}
+
+page {
+    background: #f8f8f8;
+}
+
+.page__bd_top {
+    border-bottom: 1rpx solid #d9d9d9;
+    background: #f22;
+}

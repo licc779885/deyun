@@ -1,0 +1,57 @@
+<view class="container customer">
+    <view class="b-headMenu">
+        <view class="li">
+            <checkbox-group bindchange="allSelect">
+                <checkbox value="1"></checkbox>
+            </checkbox-group>
+        </view>
+        <view class="li">全部</view>
+        <view class="li">金额</view>
+        <view class="li">手续费</view>
+    </view>
+    <view class="main">
+        <checkbox-group bindchange="checkboxChange">
+            <view class="li" wx:for="{{datasource}}">
+                <view class="text">
+                    <view class="t1 text-overHide">
+                        <checkbox checked="{{item.checked}}" data-index="{{index}}" disabled="{{!item.can}}" value="{{index}}"></checkbox>{{item.type_name}}</view>
+                    <view class="t2 text-overHide">最低提现额:{{item.roll_out_limit}}</view>
+                </view>
+                <view class="num">
+                    <view class="n1">{{item.income}}</view>
+                </view>
+                <view class="num">
+                    <view class="n2">{{item.poundage}}</view>
+                </view>
+            </view>
+        </checkbox-group>
+    </view>
+    <view class="b-br"></view>
+    <view class="main">
+        <view class="li">
+            <view class="text">
+                <view class="n1">{{totalwithdrawal}}</view>
+                <view class="n2">提现金额合计</view>
+            </view>
+            <view class="num">
+                <view class="n1">{{poundage}}</view>
+                <view class="n2">手续费合计</view>
+            </view>
+            <view class="num">
+                <view class="n1">{{servicetax}}</view>
+                <view class="n2">劳务税合计</view>
+            </view>
+        </view>
+    </view>
+    <view class="b-br"></view>
+    <view class="main">
+        <view class="bn2" wx:if="{{balance_special}}">提现到余额（手续费:{{independent_poundage}} 劳务税:{{independent_special}})</view>
+        <view class="li">
+            <view class="text">
+                <button bindtap="withdrawToBalance" class="weui-btn weui-btn_primary" data-value="{{balance.value}}" type="primary" wx:if="{{isBalance}}">{{balance.name}}</button>
+                <button bindtap="withdrawToBalance" class="weui-btn weui-btn_primary" data-value="{{wechat.value}}" type="primary" wx:if="{{isWechat}}">{{wechat.name}}</button>
+                <button bindtap="withdrawToBalance" class="weui-btn weui-btn_primary" data-value="{{manual.value}}" type="primary" wx:if="{{isManual}}">{{manual.name}}</button>
+            </view>
+        </view>
+    </view>
+</view>

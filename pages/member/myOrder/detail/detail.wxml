@@ -1,0 +1,89 @@
+<view class="inputBox">
+    <view class="li">
+        <view class="ll">
+            <text class="t1">订单编号</text>
+        </view>
+        <view class="rr">
+            <text class="t1">{{order_number}}</text>
+        </view>
+    </view>
+    <view class="li">
+        <view class="ll">
+            <text class="t1">订单状态</text>
+        </view>
+        <view class="rr">
+            <text class="t3">{{order_status_str}}</text>
+        </view>
+    </view>
+    <view class="li" wx:if="{{realname}}">
+        <view class="ll">
+            <text class="t1">收货人姓名</text>
+        </view>
+        <view class="rr">
+            <text class="t1">{{realname}}</text>
+        </view>
+    </view>
+    <view class="li" wx:if="{{tel}}">
+        <view class="ll">
+            <text class="t1">收货人电话</text>
+        </view>
+        <view class="rr">
+            <text class="t1">{{tel}}</text>
+        </view>
+    </view>
+    <view class="li" wx:if="{{address}}">
+        <view class="ll">
+            <text class="t1">收货地址</text>
+        </view>
+        <view class="rr">
+            <text class="t1">{{address}}</text>
+        </view>
+    </view>
+    <view class="li">
+        <view class="ll">
+            <text class="t1">运费</text>
+        </view>
+        <view class="rr">
+            <text class="t1">￥{{order_freight}}</text>
+        </view>
+    </view>
+    <view class="li">
+        <view class="ll">
+            <text class="t1">实付费（含运费）</text>
+        </view>
+        <view class="rr">
+            <text class="t2">￥{{order_practical}}</text>
+        </view>
+    </view>
+</view>
+<view class="b-br"></view>
+<view class="goods" wx:for="{{_goods}}">
+    <view class="head">商品列表</view>
+    <view class="ul">
+        <view bindtap="toGoods" class="li" data-item="{{item}}">
+            <image backgroundSize="cover" src="{{item.thumb}}"></image>
+            <view class="text">
+                <view class="t1">{{item.title}}</view>
+                <view class="t2">规格:{{item.goods_option_title}}</view>
+            </view>
+            <view class="num">
+                <view class="n1">￥{{item.goods_price}}</view>
+                <view class="n2">x{{item.total}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="bottom">共
+      <text class="s1">{{item.total}}</text>件商品 合计：
+      <text class="s2">￥{{item.price}}</text>
+    </view>
+</view>
+<view class="footer">
+    <view class="text">
+        <text class="s1">合计：</text>
+        <text class="s2">{{order_practical}}</text>
+        <text class="s1">元</text>
+    </view>
+    <view class="button">
+        <text bindtap="operationOrder" class="but1" data-name="{{item.name}}" data-order="{{order_data}}" data-value="{{item}}" wx:for="{{button_list}}">{{item.name}}</text>
+    </view>
+</view>

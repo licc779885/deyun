@@ -1,0 +1,50 @@
+<form bindsubmit="toRefund">
+    <view class="page__bd_lw">
+        <view class="page__bd_value">提示：您可退款的最大金额为{{refund_money}}元</view>
+        <view class="page__bd_top">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">退款金额{{money}}元</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input bindinput="bindinput" class="weui-input" name="refund_money" type="number" value="{{refund_money}}"></input>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">处理方式</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker bindchange="bindDateChange1" range="{{array1}}" name="refund_type"  value="{{array1[index1]}}">
+                        <view class="weui-input">
+            {{index1==null?'请选择处理方式':array1[index1]}}
+          </view>
+                    </picker>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">退款原因</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker bindchange="bindDateChange2" range="{{array2}}" name="reason" value="{{array2[index2]}}">
+                        <view class="weui-input">
+            {{index2==''?'请选择退款原因':array2[index2]}}
+          </view>
+                    </picker>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input in">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">退款说明</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="content" placeholder="请输入退款说明" type="text" value="{{form.content}}"></input>
+                </view>
+            </view>
+        </view>
+        <view class="weui-btn-area">
+            <button class="weui-btn" formType="submit" type="primary">确定</button>
+        </view>
+    </view>
+</form>

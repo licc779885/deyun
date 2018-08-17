@@ -1,0 +1,72 @@
+page {
+    background: #fff;
+    padding-top: 61rpx;
+}
+
+.customer .head {
+    position: fixed;
+    top: 0rpx;
+    left: 0rpx;
+    width: 751rpx;
+    z-index: 10;
+    border-bottom: 1rpx solid #d9d9d9;
+    background: #f8f8f8;
+    flex-wrap: wrap;
+    display: flex;
+    margin-left: -1rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    overflow: hidden;
+    padding: 0rpx 20rpx;
+    box-sizing: border-box;
+}
+
+.customer .head .ll {
+    flex: 1;
+}
+
+.customer .head .rr {
+    flex: 1;
+    text-align: right;
+}
+
+.customer .main {
+    border-top: 1rpx solid #d9d9d9;
+}
+
+.customer .main .li {
+    flex-wrap: wrap;
+    display: flex;
+    box-sizing: border-box;
+    padding: 20rpx 0;
+    margin: 0 20rpx;
+    border-bottom: 1rpx solid #d9d9d9;
+}
+
+.customer .main .li image {
+    height: 80rpx;
+    width: 80rpx;
+}
+
+.customer .main .li .text {
+    flex: 1;
+    padding: 0 20rpx;
+}
+
+.customer .main .li .num {
+    min-width: 150rpx;
+    text-align: right;
+}
+
+.customer .main .li .n1,.customer .main .li .t1 {
+    font-size: 28rpx;
+    line-height: 50rpx;
+    height: 50rpx;
+    overflow: hidden;
+}
+
+.customer .main .li .n2,.customer .main .li .t2 {
+    font-size: 24rpx;
+    color: #888;
+    line-height: 30rpx;
+}

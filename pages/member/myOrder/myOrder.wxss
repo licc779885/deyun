@@ -1,0 +1,105 @@
+page {
+    margin-top: 87rpx;
+    background: #f8f8f8;
+}
+
+.myOrder {font-size:26rpx;}
+
+.myOrder .sub {
+    background: #fff;
+    margin-top: 20rpx;
+    padding: 0rpx 20rpx;
+    border-top: 1rpx solid #d9d9d9;
+    border-bottom: 1rpx solid #d9d9d9;
+}
+
+.myOrder .head {
+    border-bottom: 1rpx solid #d9d9d9;
+    line-height: 60rpx;
+    display: flex;
+    flex-flow: nowrap;
+}
+
+.myOrder .head .ll {
+    flex: 1;
+}
+
+.myOrder .head .rr {
+    text-align: right;
+    width: 100rpx;
+}
+
+.myOrder .goods .li {
+    border-bottom: 1rpx solid #d9d9d9;
+    display: flex;
+    flex-flow: nowrap;
+    padding: 20rpx 0rpx;
+}
+
+.myOrder .goods image {
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.myOrder .goods .text {
+    padding-left: 20rpx;
+    flex: 1;
+}
+
+.myOrder .goods .t1 {
+    line-height: 40rpx;
+    height: 80rpx;
+    font-size: 28rpx;
+}
+
+.myOrder .goods .t2 {
+    line-height: 40rpx;
+    height: 40rpx;
+    color: #888;
+}
+
+.myOrder .goods .num {
+    text-align: right;
+    width: 200rpx;
+    line-height: 40rpx;
+}
+
+.myOrder .bottom {
+    text-align: right;
+    line-height: 60rpx;
+}
+
+.myOrder .bottom .b1 {
+    margin: 0rpx 10rpx;
+}
+
+.myOrder .bottom .b2,.myOrder .bottom .b3 {
+    margin-left: 10rpx;
+}
+
+.myOrder .button {
+    border-top: 1rpx solid #d9d9d9;
+    padding: 20rpx 0rpx;
+    text-align: right;
+}
+
+.myOrder .button .but1,.myOrder .button .but2 {
+    height: 60rpx;
+    box-sizing: border-box;
+    line-height: 58rpx;
+    padding: 0rpx 10rpx;
+    border-radius: 4rpx;
+    display: inline-block;
+    margin-left: 20rpx;
+}
+
+.myOrder .button .but1 {
+    border: 1rpx solid #5f6e8b;
+    color: #5f6e8b;
+}
+
+.myOrder .button .but2 {
+    background: #F55955;
+    border: 1rpx solid #F55955;
+    color: #fff;
+}

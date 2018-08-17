@@ -1,0 +1,41 @@
+<form bindreset="formReset" bindsubmit="formSubmit" wx:if="{{supplier_status==1}}">
+    <view class="cell-box">
+        <label class="input-block">
+            <text class="type">用户名：</text>
+            <input class="input" name="username" placeholder="请输入用户名" placeholderClass="input-block-placeholder" value="{{username}}"></input>
+        </label>
+        <label class="input-block" for="String2">
+            <text class="type">密码：</text>
+            <input class="input" name="password" password="true" placeholder="请输入密码" placeholderClass="input-block-placeholder" value="{{password}}"></input>
+        </label>
+        <label class="input-block" for="String3">
+            <text class="type">姓名：</text>
+            <input class="input" id="String3" name="realname" placeholder="请输入姓名" placeholderClass="input-block-placeholder" value="{{realname}}"></input>
+        </label>
+        <label class="input-block">
+            <text class="type">手机号：</text>
+            <input class="input" name="phone" placeholder="请输入手机号" placeholderClass="input-block-placeholder" value="{{phone}}"></input>
+        </label>
+        <label class="input-block" for="String2">
+            <text class="type">产品类型：</text>
+            <input class="input" name="product" placeholder="请输入产品类型" placeholderClass="input-block-placeholder" value="{{product}}"></input>
+        </label>
+        <label class="input-block" for="String3">
+            <text class="type">备注：</text>
+            <input class="input" name="remark" placeholder="请输入备注" placeholderClass="input-block-placeholder" value="{{remark}}"></input>
+        </label>
+    </view>
+    <view class="b-br"></view>
+    <view class="btn-area">
+        <button formType="submit" type="primary">提交申请</button>
+    </view>
+</form>
+<view class="b-altText" wx:if="{{supplier_status==-1}}">
+    <image backgroundSize="cover" mode="aspectFit" src="/image/icon_void.png"></image>
+    <view class="te1">您已通过供应商审核~</view>
+    <view class="te2">请从后台登录查看数据!</view>
+</view>
+<view class="b-altText" wx:if="{{supplier_status==0}}">
+    <image backgroundSize="cover" mode="aspectFit" src="/image/icon_void.png"></image>
+    <view class="te1">您的申请已经提交，请等待审核！</view>
+</view>

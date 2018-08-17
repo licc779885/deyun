@@ -1,0 +1,94 @@
+.banner image {
+    width: 750rpx;
+    display: block;
+    height: 300rpx;
+}
+
+.menu {
+}
+
+.menu .in1 {
+    height: 180rpx;
+}
+
+.menu .in2 {
+    height: 400rpx;
+}
+
+.menu .in3 {
+    height: 140rpx;
+}
+
+.menu .in4 {
+    height: 400rpx;
+}
+
+.menu .li {
+    width: 187.5rpx;
+    float: left;
+    text-align: center;
+    height: 180rpx;
+    overflow: hidden;
+}
+
+.menu .li-menu {
+    float: left;
+    text-align: center;
+    height: 180rpx;
+    overflow: hidden;
+}
+
+.menu .image {
+    width: 80rpx;
+    height: 80rpx;
+    display: block;
+    margin: 20rpx auto;
+}
+
+.menu .text {
+    display: block;
+    width: 187.5rpx;
+    line-height: 40rpx;
+    overflow: hidden;
+    margin-bottom: 20rpx;
+}
+
+.menu .text-menu {
+    display: block;
+    line-height: 40rpx;
+    overflow: hidden;
+    margin-bottom: 20rpx;
+}
+
+.hp-li {
+    border: 1rpx solid #e5e5e5;
+    display: block;
+    background: #fff;
+    margin:15rpx auto 0;
+    height:auto;
+    padding: 5rpx;
+    width: 96%!important;
+}
+
+.hp-line {
+    height:85rpx;
+    font-size:28rpx;
+    color: #333;
+    line-height:40rpx;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.banner wx-image{ width:1080rpx; display: block; height:432rpx; }
+.menu{ border-bottom:1rpx solid #d9d9d9; }
+.menu .in1{ height:316rpx; }
+.menu .in2{ height:576rpx; }
+.menu .li{ width:270rpx; float:left; text-align: center; height:259rpx; overflow: hidden; }
+.menu .image{ width:115rpx; height:115rpx; display: block; margin:28rpx auto; border-radius: 4rpx; }
+.menu .text{ display: block; width:270rpx; line-height:57rpx; overflow: hidden; margin-bottom:28rpx; }
+.menu .li{ width:270rpx; float:left; text-align: center; height:259rpx; overflow: hidden; }
+.menu .li-menu{ float:left; text-align: center; height:259rpx; overflow: hidden; }
+.menu .text-menu{ display: block; line-height:57rpx; overflow: hidden; margin-bottom:28rpx; }

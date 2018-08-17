@@ -1,0 +1,24 @@
+page {
+    background: #f8f8f8;
+}
+
+.container {
+    z-index: 100;
+    position: relative;
+}
+
+.userinfo {
+    text-align: center;
+    background: #4C5C6E;
+    padding: 50rpx 0rpx;
+}
+
+.userinfo .t1 {
+    color: rgba(255,255,255,1);
+    font-size: 80rpx;
+}
+
+.userinfo .t2 {
+    color: rgba(255,255,255,0.7);
+    font-size: 28rpx;
+}

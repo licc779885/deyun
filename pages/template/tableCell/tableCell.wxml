@@ -1,0 +1,15 @@
+<template name="tableCell">
+    <navigator bindtap="{{bindtap}}" class="table-cell" hoverClass="other-navigator-hover" url="{{url}}">
+        <view class="main">
+            <view class="icon">
+                <template is="imageBe" data="{{class:'',imgName:imageUrl}}"></template>
+            </view>
+            <view class="name text-overHide">{{name}}</view>
+            <view class="title text-overHide">{{title}}</view>
+            <view class="arrow">
+                <template is="imageBe" data="{{class:'',imgName:'arrowright.png'}}"></template>
+            </view>
+        </view>
+    </navigator>
+</template>
+<import src="../../template/imageBe/imageBe.wxml"></import>

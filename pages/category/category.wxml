@@ -1,0 +1,23 @@
+<page>
+  <navigator hoverClass="other-navigator-hover" class="b-search fixed border" url="../search/search">
+    <view class="main">
+      <icon size="12" type="search"></icon>
+      <text class="input1">请输入搜索内容</text>
+    </view>
+  </navigator>
+  <view class="container">
+    <block wx:for-items="{{categoryData}}" wx:key="">
+      <view class="ul">
+        <view class="head">{{item.name}}</view>
+        <view class="main clearlw">
+          <block wx:for-items="{{item.children}}" wx:key="">
+            <navigator class="li" hoverClass="other-navigator-hover" url="../buy/goodsList/goodsList?pcateid=&ccateid={{item.id}}&tcateid=">
+              <image src="{{item.thumb}}" backgroundSize="cover"></image>
+              <text>{{item.name}}{{item.id}}</text>
+            </navigator>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+</page>

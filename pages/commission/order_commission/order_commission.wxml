@@ -1,0 +1,20 @@
+<view class="container customer">
+    <view class="b-headMenu">
+        <view bindtap="order_commission_all_clicked" class="li {{order_commission_all_active}}" hover="true">所有订单</view>
+        <view bindtap="order_commission_wait_pay_clicked" class="li {{order_commission_wait_pay_active}}" hover="true">待付款</view>
+        <view bindtap="order_commission_already_pay_clicked" class="li {{order_commission_already_pay_active}}" hover="true">已付款</view>
+        <view bindtap="order_commission_finish_clicked" class="li {{order_commission_finish_active}}" hover="true">已完成</view>
+    </view>
+    <view class="main">
+        <view class="li" wx:for="{{orders}}">
+            <view class="text">
+                <view class="t1 text-overHide">{{item.ordersn}}{{item.hierarchy}}</view>
+                <view class="t2 text-overHide">{{item.create_time}}</view>
+            </view>
+            <view class="num">
+                <view class="n1">{{item.commission}}</view>
+                <view class="n2">{{item.status}}</view>
+            </view>
+        </view>
+    </view>
+</view>

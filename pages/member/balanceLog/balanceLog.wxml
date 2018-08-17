@@ -1,0 +1,40 @@
+<view class='cz_menu'>
+  <view class="cz_menu_url {{type=='rechargeLog'?'active':''}}"><navigator url='./balanceLog?type=rechargeLog'>充值记录</navigator></view>
+  <view class="cz_menu_url {{type=='withdrawLog'?'active':''}}"><navigator url='./balanceLog?type=withdrawLog'>提现记录</navigator></view>
+  <view class="cz_menu_url {{type=='transferLog'?'active':''}}"><navigator url='./balanceLog?type=transferLog'>转账记录</navigator></view>
+</view>
+<view class='cz_content' wx:for="{{chargeData}}" wx:if="{{type=='rechargeLog'}}">
+  <view class='cz_vmt'>
+    <view class='cz_vmt_money'>{{item.title}}：<text class='money'>{{item.money}}</text></view>
+    <view class='cz_vmt_time'>{{item.createtime}}</view>
+  </view>
+  <view class='cz_vmt cz_none'>
+    <view class='cz_vmt_money'>{{item.status_name}}</view>
+  </view>
+</view>
+<view class='cz_content' wx:for="{{withDrawData}}" wx:if="{{type=='withdrawLog'}}">
+  <view class='cz_vmt'>
+    <view class='cz_vmt_money'>{{item.title}}：<text class='money'>{{item.money}}</text></view>
+    <view class='cz_vmt_time'>{{item.createtime}}</view>
+  </view>
+  <view class='cz_vmt cz_none'>
+    <view class='cz_vmt_money'>{{item.status_name}}</view>
+    <view class='cz_vmt_money' wx:if="{{item.poundage}}">手续费：{{item.poundage}}</view>
+  </view>
+</view>
+<view class='cz_content' wx:for="{{transferData}}" wx:if="{{type=='transferLog'}}">
+<view class='cz_vmt'>
+  <view class='cz_vmt_money'>转让金额：<text class='money'>{{item.money}}</text></view>
+  <view class='cz_vmt_time'>{{item.createtime}}</view>
+</view>
+<view class='cz_vmt cz_none'>
+  <view class='cz_vmt_money'>{{item.status_name}}</view>
+  <view class='cz_vmt_money' wx:if="{{item.name}}">{{item.name}}</view>
+</view>
+</view>
+<view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>  
+<view class="loading complete" hidden="{{hasMoreData}}">已加载全部</view>  
+
+
+
+

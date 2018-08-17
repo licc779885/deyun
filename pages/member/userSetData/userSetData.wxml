@@ -1,0 +1,65 @@
+<import src="../../template/imageBe/imageBe.wxml"></import>
+<form bindsubmit="formSubmitUserData">
+    <view class="cell-box">
+        <label class="input-block" wx:if="{{type=='nickname'}}">
+            <text class="type">昵称：</text>
+            <input class="input" name="nickname" placeholder="请输入" placeholderClass="input-block-placeholder" value="{{value}}"></input>
+        </label>
+        <block wx:if="{{type=='mobile'}}">
+            <label class="input-block">
+                <text class="type" style="min-width:108rpx;">手机号：</text>
+                <input class="input"  bindinput="phoneinput" name="mobile" placeholder="请输入" placeholderClass="input-block-placeholder" value="{{value}}"></input>
+            </label>
+            <label class="input-block">
+               <view class="weui-cell weui-cell_input weui-cell_vcode" style="padding:0;overflow:hidden;width:100%;">
+	                <view class="weui-cell__hd">
+	                    <view class="weui-label">验证码：</view>
+	                </view>
+	                <view class="weui-cell__bd">
+	                    <input  name="code" class="weui-input" placeholder="请输入验证码"></input>
+	                </view>
+                  <view>
+                  	   <view bindtap="changeCode"  class="weui-cell__ft" style='float:right;'>
+	                         <view class="weui-vcode-btn" style='font-size:32rpx;color:{{color}}'>获取验证码 {{phoneCode}}
+                           </view>
+                        </view>
+                  </view>
+	            </view>
+            </label>
+        </block>
+        <label class="input-block" wx:if="{{type=='weixin'}}">
+            <text class="type">微信号：</text>
+            <input class="input" name="weixin" placeholder="请输入" placeholderClass="input-block-placeholder" value="{{value}}"></input>
+        </label>
+        <label class="input-block" wx:if="{{type=='alipay'}}">
+            <text class="type">支付宝账号：</text>
+            <input class="input" name="alipay" placeholder="请输入" placeholderClass="input-block-placeholder" value="{{value}}"></input>
+        </label>
+        <label class="input-block" wx:if="{{type=='alipayname'}}">
+            <text class="type">支付宝账号姓名：</text>
+            <input class="input" name="alipayname" placeholder="请输入" placeholderClass="input-block-placeholder" value="{{value}}"></input>
+        </label>
+        <label class="input-block" wx:if="{{type=='realname'}}">
+            <text class="type">真实姓名：</text>
+            <input class="input" name="realname" placeholder="请输入" placeholderClass="input-block-placeholder" value="{{value}}"></input>
+        </label>
+        <radio-group bindchange="radioChange" class="radio-group" wx:if="{{type=='gender'}}">
+            <label class="radio" wx:for="{{items}}">
+                <radio checked="" value=""></radio>
+            </label>
+        </radio-group>
+        <label class="input-block" wx:if="{{type=='address'}}">
+            <text class="type">地址：</text>
+            <view bindtap="_openDateLw">{{addressData[0].name}}{{addressData[1].name}}{{addressData[2].name}}</view>
+        </label>
+        <label class="input-block" wx:if="{{type=='birthday'}}">
+            <text class="type">出生日期：</text>
+            <picker bindchange="bindDateChange" end="{{dateToday}}" mode="date" start="1999-01-01" value="{{date}}">
+                <view class="picker">
+            请选择: {{date}}
+          </view>
+            </picker>
+        </label>
+    </view>
+    <button class="b-button-block button-other-red radius" formType="submit">提交保存</button>
+</form>

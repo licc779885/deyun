@@ -1,0 +1,11 @@
+<template name="banner">
+    <view class="banner">
+        <swiper autoplay="1" duration="300" indicatorDots="1" interval="4000">
+            <swiper-item wx:for="{{data}}">
+                <navigator url="{{item.hrefurl}}">
+                    <image mode="widthFix" src="{{item.imgurl}}"></image>
+                </navigator>
+            </swiper-item>
+        </swiper>
+    </view>
+</template>

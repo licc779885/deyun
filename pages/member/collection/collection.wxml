@@ -1,0 +1,26 @@
+<import src="../../template/imageBe/imageBe.wxml"></import>
+<view class="b-altText" wx:if="{{dataState==0}}">
+    <template is="imageBe" data="{{class:'',imgName:'icon_iconfontshuaxin.png'}}"></template>
+    <view class="te1">数据加载中...</view>
+</view>
+<view class="b-altText" wx:if="{{dataState==1}}">
+    <template is="imageBe" data="{{class:'',imgName:'icon_void.png'}}"></template>
+    <view class="te1">您还没有收藏任何商品</view>
+</view>
+<view class="b-goodsList row" wx:if="{{dataState==2}}">
+    <view class="main">
+        <view class="li" wx:for="{{goodsData}}">
+            <image bindtap="goDetail" class="img1" data-goodsid="{{item.goodsid}}" src="{{item.thumb}}"></image>
+            <view bindtap="goDetail" class="name" data-goodsid="{{item.goodsid}}">
+                <text>{{item.title}}</text>
+            </view>
+            <view bindtap="goDetail" class="Price" data-goodsid="{{item.goodsid}}">
+                <text class="s1">￥{{item.productprice}}</text>
+                <text class="s2">￥{{item.marketprice}}</text>
+            </view>
+            <view bindtap="delData" class="del" data-goodsid="{{item.goodsid}}">
+                <template is="imageBe" data="{{class:'imgDel',imgName:'icon_del.png'}}"></template>
+            </view>
+        </view>
+    </view>
+</view>

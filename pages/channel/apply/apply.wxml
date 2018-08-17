@@ -1,0 +1,22 @@
+<form bindsubmit="formSubmit">
+    <view class="cell-box">
+        <label class="input-block">
+            <text class="type">公司/个人：</text>
+            <input class="input" id="realname" name="realname" placeholder="请输入" placeholderClass="input-block-placeholder"></input>
+        </label>
+        <label class="input-block" for="String2">
+            <text class="type">联系电话：</text>
+            <input class="input" id="mobile" name="mobile" placeholder="请输入" placeholderClass="input-block-placeholder"></input>
+        </label>
+        <label class="input-block" for="String3">
+            <text class="type">联系地址：</text>
+            <input class="input" id="address" name="address" placeholder="请输入" placeholderClass="input-block-placeholder"></input>
+        </label>
+        <label class="input-block">
+            <text class="type">授权域名：</text>
+            <input class="input" id="url" name="url" placeholder="请输入" placeholderClass="input-block-placeholder"></input>
+        </label>
+    </view>
+    <view class="b-br"></view>
+    <button class="b-button-block button-other-red radius" formType="submit">提交申请</button>
+</form>

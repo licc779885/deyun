@@ -1,0 +1,20 @@
+
+<view class="b-headMenu">
+  <view wx:for="{{navs}}" bindtap='commission_clicked'class="li {{state==item.status}}"  data-state="{{item.status}}">
+    {{item.text}}
+  </view>
+</view>
+<view class="container customer">
+    <view class="main ">
+        <view class="li " wx:for="{{commissionLogs}}">
+            <view class="text ">
+                <view class="t1 text-overHide ">{{item.applyno}}</view>
+                <view class="t2 text-overHide ">{{item.commission_sq}}</view>
+            </view>
+            <view class="num ">
+                <view class="n1 ">{{item.commission_pay}}</view>
+                <view class="n2 ">{{item.statusstr}}</view>
+            </view>
+        </view>
+    </view>
+</view>

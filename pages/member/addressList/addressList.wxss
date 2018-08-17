@@ -1,0 +1,90 @@
+page {
+    background: #f8f8f8;
+    padding-bottom: 90rpx;
+}
+
+.addressList {
+}
+
+.addressList .li {
+    padding: 0rpx 20rpx;
+    background: #fff;
+    border-top: 1rpx solid #d9d9d9;
+    border-bottom: 1rpx solid #d9d9d9;
+    margin-bottom: 20rpx;
+}
+
+.addressList .hh {
+    line-height: 50rpx;
+    font-size: 32rpx;
+    color: #414141;
+    padding-top: 10rpx;
+}
+
+.addressList .t1,.addressList .t2 {
+    margin-right: 10rpx;
+    vertical-align: middle;
+}
+
+.addressList .mm {
+    line-height: 40rpx;
+    overflow: hidden;
+    color: #666;
+    padding: 10rpx 0rpx;
+    border-bottom: 1rpx solid #d9d9d9;
+}
+
+.addressList .fn {
+    padding: 20rpx 0rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.addressList .radio {
+    flex: 1;
+}
+
+.addressList .radio text {
+    vertical-align: middle;
+    margin-left: 10rpx;
+    line-height: 20rpx;
+}
+
+.addressList .radio .radio_1 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.addressList .radio .radio_2 {
+    display: none;
+    vertical-align: middle;
+}
+
+.addressList .radio.true .radio_1 {
+    display: none;
+}
+
+.addressList .radio.true .radio_2 {
+    display: inline-block;
+}
+
+.addressList .del {
+    margin-left: 40rpx;
+}
+
+.addressList .handle {
+}
+
+.addressList .handle image {
+    width: 40rpx;
+    height: 40rpx;
+    vertical-align: middle;
+}
+
+.addressList .handle text {
+    vertical-align: middle;
+    line-height: 40rpx;
+    margin-left: 15rpx;
+    color: #888;
+    font-size: 28rpx;
+}

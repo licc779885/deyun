@@ -1,0 +1,301 @@
+page {
+    background: #f8f8f8;
+    padding-bottom: 90rpx;
+}
+
+.address {
+    background: #fff;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    border-bottom: 1rpx solid #d9d9d9;
+}
+
+.address .l,.address .r {
+    width: 50rpx;
+    text-align: center;
+    height: 30rpx;
+}
+
+.address .l {
+    width: 100rpx;
+}
+
+.address .r {
+    width: 70rpx;
+}
+
+.address .l image,.address .r image {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.address .c {
+    font-size: 28rpx;
+    flex: 1;
+}
+
+.address .top {
+    padding-top: 20rpx;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 40rpx;
+    font-size: 32rpx;
+    font-weight: bold;
+    padding-bottom: 20rpx;
+}
+
+.address .top .phone {
+    margin-left: 20rpx;
+}
+
+.address .bottom {
+    padding: 0rpx 0rpx 20rpx 0rpx;
+    line-height: 25rpx;
+    text-align: justify;
+    font-size: 28rpx;
+}
+
+.goods {
+    background: #fff;
+    border-bottom: 1rpx solid #d9d9d9;
+    padding: 0rpx 20rpx;
+    position: relative;
+    z-index: 2;
+}
+
+.goods .head {
+    line-height: 60rpx;
+    border-bottom: 1rpx solid #d9d9d9;
+}
+
+.goods .li {
+    border-bottom: 1rpx solid #d9d9d9;
+    display: flex;
+    flex-flow: nowrap;
+    padding: 20rpx 0rpx;
+}
+
+.goods .li image {
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.goods .li .text {
+    padding-left: 20rpx;
+    flex: 1;
+}
+
+.goods .li .t1 {
+    line-height: 40rpx;
+    height: 80rpx;
+    font-size: 28rpx;
+    overflow: hidden;
+}
+
+.goods .li .t2 {
+    line-height: 40rpx;
+    height: 40rpx;
+    color: #888;
+}
+
+.goods .li .num {
+    text-align: right;
+    width: 200rpx;
+    line-height: 40rpx;
+}
+
+.goods .li .n1 {
+    font-size: 28rpx;
+}
+
+.goods .input {
+    padding: 20rpx 0rpx;
+    border-bottom: 1rpx solid #d9d9d9;
+}
+
+.goods .input input {
+    border: 1rpx solid #d9d9d9;
+    background: #f8f8f8;
+    padding: 10rpx 20rpx;
+    height: 28rpx;
+    line-height: 28rpx;
+}
+
+.goods .bottom {
+    text-align: right;
+    line-height: 80rpx;
+    font-size: 28rpx;
+}
+
+.goods .bottom .s1 {
+    margin: 0rpx 6rpx;
+    color: #F55955;
+    font-weight: bold;
+}
+
+.goods .bottom .s2 {
+    color: #F55955;
+    font-weight: bold;
+}
+
+.inputBox {
+    background: #fff;
+    padding: 0rpx 20rpx;
+    border-bottom: 1rpx solid #D9D9D9;
+    overflow: hidden;
+    margin-top: -3rpx;
+}
+
+.inputBox .li {
+    border-top: 1rpx solid #d9d9d9;
+    margin: 0rpx;
+    display: flex;
+    flex-flow: nowrap;
+    align-items: center;
+    padding: 10rpx 0rpx;
+    font-size: 28rpx;
+    height: 70rpx;
+    overflow: hidden;
+}
+
+.inputBox .li .ll {
+    flex: 1;
+}
+
+.inputBox .li .t1 {
+    margin-right: 10rpx;
+}
+
+.inputBox .li .t2 {
+    margin-right: 10rpx;
+    color: #f22;
+}
+
+.inputBox .li .rr {
+    text-align: right;
+    flex: 1;
+}
+
+.inputBox .icon {
+    height: 30rpx;
+    display: block;
+    width: 30rpx;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    height: 88rpx;
+    width: 751rpx;
+    margin-left: -1rpx;
+    position: fixed;
+    bottom: -1rpx;
+    left: 0rpx;
+    background: #fff;
+    z-index: 100;
+    border-top: 1rpx solid #d9d9d9;
+}
+
+.footer .radio {
+    width: 200rpx;
+    height: 88rpx;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.footer icon {
+    margin-left: 20rpx;
+    display: inline-block;
+}
+
+.footer .all {
+    margin-left: 20rpx;
+    font-size: 28rpx;
+    color: #666;
+}
+
+.footer .text {
+    flex: 1;
+    height: 88rpx;
+    text-align: right;
+    padding: 10rpx 10rpx;
+}
+
+.footer .text .t1 {
+    line-height: 38rpx;
+}
+
+.footer .text .t2 {
+    font-size: 32rpx;
+    color: #F55955;
+    vertical-align: middle;
+    line-height: 38rpx;
+}
+
+.footer .text .t3 {
+    display: block;
+    line-height: 30rpx;
+    font-size: 22rpx;
+}
+
+.footer .button {
+    width: 250rpx;
+    height: 88rpx;
+    padding: 10rpx;
+    box-sizing: border-box;
+}
+
+.footer .but {
+    width: 100%;
+    line-height: 68rpx;
+    background: #F55955;
+    color: #fff;
+    text-align: center;
+    border-radius: 4rpx;
+}
+
+.takeInput {
+    background: #fff;
+    border-bottom: 1rpx solid #d9d9d9;
+    border-top: 1rpx solid #d9d9d9;
+    padding: 0rpx 20rpx;
+}
+
+.takeInput .border {
+    border-top: 1rpx solid #d9d9d9;
+}
+
+.takeInput .li {
+    height: 88rpx;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-flow: nowrap;
+}
+
+.takeInput .ll {
+    flex: 1;
+    line-height: 88rpx;
+    overflow: hidden;
+}
+
+.takeInput .rr {
+    flex: 1;
+    text-align: right;
+    overflow: hidden;
+}
+
+.anotherPay {
+    width: 70%;
+    margin: auto;
+    margin-top: 10rpx;
+}
+
+.li image {
+    width: 120rpx;
+    height: 120rpx;
+}

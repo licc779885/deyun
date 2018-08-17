@@ -1,0 +1,44 @@
+<view bindtap="_closeDateLw" class="b-mask {{openDateLw}}"></view>
+<view class="dateBe {{openDateLw}}">
+    <view class="head">
+        <view bindtap="_closeDateLw" class="ll">取消</view>
+        <view bindtap="_okAddress" class="rr">确定</view>
+    </view>
+    <view class="main">
+        <picker-view bindchange="bindChange" indicatorStyle="height: 50px;" style="width: 100%; height: 300px;" value="{{[pickerValue[0],pickerValue[1],pickerValue[2]]}}">
+            <picker-view-column id="provinceData">
+                <view style="line-height: 50px" wx:for="{{provinceData}}">{{item.name}}</view>
+            </picker-view-column>
+            <picker-view-column id="cityData">
+                <view style="line-height: 50px" wx:for="{{cityData}}">{{item.name}}</view>
+            </picker-view-column>
+            <picker-view-column id="districtData">
+                <view style="line-height: 50px" wx:for="{{districtData}}">{{item.name}}</view>
+            </picker-view-column>
+        </picker-view>
+    </view>
+</view>
+<form bindreset="formReset" bindsubmit="formSubmit">
+    <view class="cell-box">
+        <label class="input-block">
+            <text class="type">收货人：</text>
+            <input class="input" maxlength="11" name="realname" placeholder="请输入收货人姓名" placeholderClass="input-block-placeholder" type="text" value="{{userData.realname}}"></input>
+        </label>
+        <label class="input-block" for="String2">
+            <text class="type">联系方式：</text>
+            <input class="input" maxlength="11" name="mobile" placeholder="请输入收货人联系方式" placeholderClass="input-block-placeholder" type="number" value="{{userData.mobile}}"></input>
+        </label>
+        <label class="input-block" for="String3">
+            <text class="type">选择省份：</text>
+            <view bindtap="_openDateLw" class="input">{{addressData[0].name}}   {{addressData[1].name}}   {{addressData[2].name}}</view>
+        </label>
+        <label class="input-block {{addressInputState}}">
+            <text class="type">详细地址：</text>
+            <input class="input" maxlength="32" name="address" placeholder="请输入详细地址" placeholderClass="input-block-placeholder" type="text" value="{{userData.address}}"></input>
+        </label>
+    </view>
+    <view class="b-br"></view>
+    <view class="btn-area">
+        <button style="font-size:15px" formType="submit" type="primary">保存</button>
+    </view>
+</form>

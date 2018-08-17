@@ -1,0 +1,111 @@
+page:after {
+    content: " ";
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1rpx;
+    border-top: 500rpx solid #4EAE7B;
+    z-index: 10;
+}
+
+.container {
+    z-index: 100;
+    position: relative;
+    background: #fff;
+}
+
+.userinfo {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding-top: 50rpx;
+}
+
+.userinfo-face {
+    width: 160rpx;
+    height: 160rpx;
+    display: block;
+    border-radius: 50%;
+    border: 4rpx solid rgba(0,0,0,0.1);
+    margin: 0rpx auto 30rpx auto;
+}
+
+.userinfo-name {
+    color: #fff;
+    line-height: 50rpx;
+    font-size: 32rpx;
+}
+
+.userinfo-level {
+    color: #FFE10F;
+    margin-left: 10rpx;
+}
+
+.userinfo-time {
+    color: #fff;
+    line-height: 50rpx;
+    font-size: 20rpx;
+    border-top: 1rpx solid rgba(0,0,0,0.1);
+    padding-top: 30rpx;
+    margin: 40rpx 100rpx 0rpx 100rpx;
+}
+
+.userinfo-jine {
+    font-size: 68rpx;
+    color: #fff;
+    padding-top: 20rpx;
+}
+
+.userinfo-jine text {
+    font-size: 28rpx;
+    color: #fff;
+    vertical-align: middle;
+    margin-left: 20rpx;
+}
+
+.userinfo-recharge {
+    padding-top: 20rpx;
+}
+
+.userinfo-recharge text {
+    border-radius: 8rpx;
+    line-height: 80rpx;
+    font-size: 28rpx;
+    color: #fff;
+    border: 1rpx solid #fff;
+    display: inline-block;
+    padding: 0rpx 100rpx;
+}
+
+.user-balance {
+    display: flex;
+    padding: 30rpx 0rpx;
+    margin-left: -1rpx;
+    margin-top: 40rpx;
+    width: 751rpx;
+    background: rgba(0,0,0,0.1);
+}
+
+.user-balance .li {
+    border-left: 1rpx solid rgba(255,255,255,0.2);
+    box-sizing: border-box;
+    flex: 1;
+    text-align: center;
+}
+
+.user-balance .li:first-child {
+    border-left-width: 0rpx;
+}
+
+.user-balance .t1 {
+    font-size: 34rpx;
+    color: #fff;
+}
+
+.user-balance .t2 {
+    padding-top: 20rpx;
+    color: #fff;
+    opacity: 0.8;
+}

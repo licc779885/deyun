@@ -1,0 +1,80 @@
+<form bindsubmit="payCharge" wx:if="{{type=='recharge'}}">
+    <view class="inputBox">
+        <view class="li">
+            <view class="ll">
+                <text class="t1">当前余额</text>
+            </view>
+            <view class="rr">
+                <text class="t2">{{balance}}</text>
+          元
+        </view>
+        </view>
+        <view class="li">
+            <view class="ll">
+                <text class="t1">充值金额</text>
+            </view>
+            <view class="rr">
+                <input class="input" name="charge_money" placeholder="请输入充值金额" type="digit" value="{{charge_money}}"></input>
+            </view>
+        </view>
+    </view>
+    <view class="b-btn-area">
+        <button formType="submit" type="primary">微信支付</button>
+    </view>
+</form>
+<form bindsubmit="withdraw" wx:if="{{type=='withdraw'}}">
+    <view class="inputBox">
+        <view class="li">
+            <view class="ll">
+                <text class="t1">当前余额</text>
+            </view>
+            <view class="rr">
+                <text class="t2">{{balance}}</text>
+          元
+        </view>
+        </view>
+        <view class="li">
+            <view class="ll">
+                <text class="t1">提现金额</text>
+            </view>
+            <view class="rr">
+                <input class="input" name="withdraw_value" placeholder="请输入提现金额" type="number" value="{{withdraw_value}}"></input>
+            </view>
+        </view>
+    </view>
+    <view class="b-btn-area">
+        <button formType="submit" type="primary">提现</button>
+    </view>
+</form>
+<form bindsubmit="transfer" wx:if="{{type=='transfer'}}">
+    <view class="inputBox">
+        <view class="li">
+            <view class="ll">
+                <text class="t1">当前余额</text>
+            </view>
+            <view class="rr">
+                <text class="t2">{{balance}}</text>
+          元
+        </view>
+        </view>
+        <view class="li">
+            <view class="ll">
+                <text class="t1">受让人ID</text>
+            </view>
+            <view class="rr">
+                <input class="input" name="transfer_id" placeholder="请输入受让人ID" type="number" value="{{transfer_id}}"></input>
+            </view>
+        </view>
+        <view class="li">
+            <view class="ll">
+                <text class="t1">转账金额</text>
+            </view>
+            <view class="rr">
+                <input class="input" name="transfer_money" placeholder="请输入转账金额" type="number" value="{{transfer_money}}"></input>
+            </view>
+        </view>
+    </view>
+    <view class="b-btn-area">
+        <button formType="submit" type="primary">确认转账</button>
+    </view>
+</form>

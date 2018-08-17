@@ -1,0 +1,13 @@
+<template name="cube">
+    <view class="cube-list">
+        <view class="main">
+            <block wx:for="{{params.layout}}" wx:for-item="params">
+                <view class="cols-{{item.cols}}" wx:for="{{params}}">
+                    <navigator url="{{item.url}}">
+                        <image class="img1" mode="widthFix" src="{{item.imgurl}}" wx:if="{{!item.isempty&&item.imgurl}}"></image>
+                    </navigator>
+                </view>
+            </block>
+        </view>
+    </view>
+</template>

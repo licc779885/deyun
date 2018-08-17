@@ -1,0 +1,143 @@
+<import src="/pages/template/imageBe/imageBe.wxml"></import>
+<view class="container allReturn">
+    <view class="b-headMenu">
+        <view class="li in">所有订单</view>
+        <view class="li">待付款</view>
+        <view class="li">已付款</view>
+        <view class="li">已完成</view>
+    </view>
+    <view class="main">
+        <view class="li">
+            <view class="text">
+                <view class="t1 text-overHide">SH201612141349481344(一级）</view>
+                <view class="t2 text-overHide">2016-12-14 13:49</view>
+            </view>
+            <view class="num">
+                <view class="n1">+600.00</view>
+                <view class="n2">已完成</view>
+            </view>
+        </view>
+        <view class="li">
+            <view class="text">
+                <view class="t1 text-overHide">SH201612141349481344(一级）</view>
+                <view class="t2 text-overHide">2016-12-14 13:49</view>
+            </view>
+            <view class="num">
+                <view class="n1">+600.00</view>
+                <view class="n2">已完成</view>
+            </view>
+        </view>
+        <view class="li">
+            <view class="text">
+                <view class="t1 text-overHide">SH201612141349481344(一级）</view>
+                <view class="t2 text-overHide">2016-12-14 13:49</view>
+            </view>
+            <view class="num">
+                <view class="n1">+600.00</view>
+                <view class="n2">已完成</view>
+            </view>
+        </view>
+        <view class="li">
+            <view class="text">
+                <view class="t1 text-overHide">SH201612141349481344(一级）</view>
+                <view class="t2 text-overHide">2016-12-14 13:49</view>
+            </view>
+            <view class="num">
+                <view class="n1">+600.00</view>
+                <view class="n2">已完成</view>
+            </view>
+        </view>
+        <view class="li">
+            <view class="text">
+                <view class="t1 text-overHide">SH201612141349481344(一级）</view>
+                <view class="t2 text-overHide">2016-12-14 13:49</view>
+            </view>
+            <view class="num">
+                <view class="n1">+600.00</view>
+                <view class="n2">已完成</view>
+            </view>
+        </view>
+        <view class="li">
+            <view class="text">
+                <view class="t1 text-overHide">SH201612141349481344(一级）</view>
+                <view class="t2 text-overHide">2016-12-14 13:49</view>
+            </view>
+            <view class="num">
+                <view class="n1">+600.00</view>
+                <view class="n2">已完成</view>
+            </view>
+        </view>
+        <view class="li">
+            <view class="text">
+                <view class="t1 text-overHide">SH201612141349481344(一级）</view>
+                <view class="t2 text-overHide">2016-12-14 13:49</view>
+            </view>
+            <view class="num">
+                <view class="n1">+600.00</view>
+                <view class="n2">已完成</view>
+            </view>
+        </view>
+        <view class="li">
+            <view class="text">
+                <view class="t1 text-overHide">SH201612141349481344(一级）</view>
+                <view class="t2 text-overHide">2016-12-14 13:49</view>
+            </view>
+            <view class="num">
+                <view class="n1">+600.00</view>
+                <view class="n2">已完成</view>
+            </view>
+        </view>
+        <view class="li">
+            <view class="text">
+                <view class="t1 text-overHide">SH201612141349481344(一级）</view>
+                <view class="t2 text-overHide">2016-12-14 13:49</view>
+            </view>
+            <view class="num">
+                <view class="n1">+600.00</view>
+                <view class="n2">已完成</view>
+            </view>
+        </view>
+        <view class="li">
+            <view class="text">
+                <view class="t1 text-overHide">SH201612141349481344(一级）</view>
+                <view class="t2 text-overHide">2016-12-14 13:49</view>
+            </view>
+            <view class="num">
+                <view class="n1">+600.00</view>
+                <view class="n2">已完成</view>
+            </view>
+        </view>
+        <view class="li">
+            <view class="text">
+                <view class="t1 text-overHide">SH201612141349481344(一级）</view>
+                <view class="t2 text-overHide">2016-12-14 13:49</view>
+            </view>
+            <view class="num">
+                <view class="n1">+600.00</view>
+                <view class="n2">已完成</view>
+            </view>
+        </view>
+        <view class="li">
+            <view class="text">
+                <view class="t1 text-overHide">SH201612141349481344(一级）</view>
+                <view class="t2 text-overHide">2016-12-14 13:49</view>
+            </view>
+            <view class="num">
+                <view class="n1">+600.00</view>
+                <view class="n2">已完成</view>
+            </view>
+        </view>
+    </view>
+    <view class="b-footerMenu">
+        <view class="li in">
+            <template is="imageBe" data="{{class:'img1',imgName:'icon_collection_out.png'}}"></template>
+            <template is="imageBe" data="{{class:'img2',imgName:'icon_collection.png'}}"></template>
+            <text class="name">返现队列</text>
+        </view>
+        <view class="li">
+            <template is="imageBe" data="{{class:'img1',imgName:'icon_collection_out.png'}}"></template>
+            <template is="imageBe" data="{{class:'img2',imgName:'icon_collection.png'}}"></template>
+            <text class="name">返现记录</text>
+        </view>
+    </view>
+</view>

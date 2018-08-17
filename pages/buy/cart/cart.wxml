@@ -1,0 +1,53 @@
+<import src="/pages/template/imageBe/imageBe.wxml"></import>
+<view class="b-altText" wx:if="{{cartState==1}}">
+    <template is="imageBe" data="{{class:'',imgName:'icon_void.png'}}"></template>
+    <view class="te1">里面什么也没有哦~</view>
+    <view class="te2">去试试其他的吧!</view>
+    <view>
+        <button bindtap="goHome" class="te3" type="warn">去逛逛</button>
+    </view>
+</view>
+<view class="b-altText" wx:if="{{cartState==0}}">
+    <template is="imageBe" data="{{class:'',imgName:'icon_iconfontshuaxin.png'}}"></template>
+    <view class="te1">购物车加载中</view>
+</view>
+<view class="cart" wx:if="{{cartState==2}}">
+    <view class="main">
+        <view class="li radio" id="{{item.goodsid}}" wx:for="{{goodsData}}">
+            <view class="mask">
+                <icon bindtap="selectGoods" class="radio_1" data-id="{{item.id}}" size="24" type="circle" wx:if="{{!item.state}}"></icon>
+                <icon bindtap="selectGoods" class="radio_2" data-id="{{item.id}}" size="24" type="success_circle" wx:if="{{item.state}}"></icon>
+            </view>
+            <image bindtap="goToDetail" class="img1" data-id="{{item.goodsid}}" src="{{item.thumb}}"></image>
+            <view bindtap="goToDetail" class="name text-overHide" data-id="{{item.goodsid}}">{{item.title}}</view>
+            <view class="spec" wx:if="{{item.optionid}}">规格{{item.optiontitle}}</view>
+            <view class="Price">
+                <text class="s1">￥{{item.marketprice}}</text>
+                <text class="s2">￥{{item.productprice}}</text>
+            </view>
+            <view class="num">
+                <view bindtap="removeGoodsNum" class="btn" data-id="{{item.goodsid}}" data-optionid="{{item.optionid}}" data-total="{{item.total}}">-</view>
+                <input bindinput="inputGoodsNum" class="input1" data-id="{{item.goodsid}}" data-optionid="{{item.optionid}}" data-total="{{item.total}}" name="name" placeholderStyle="" type="number" value="{{item.total}}"></input>
+                <view bindtap="addGoodsNum" class="btn" data-id="{{item.goodsid}}" data-optionid="{{item.optionid}}" data-total="{{item.total}}">+</view>
+            </view>
+            <view bindtap="deleteGoods" class="deleteGoods" data-id="{{item.id}}">
+                <template is="imageBe" data="{{class:'',imgName:'icon_del.png'}}"></template>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="footer" wx:if="{{cartState==2}}">
+    <view bindtap="allSelect" class="radio">
+        <icon class="radio_1" size="24" type="circle" wx:if="{{selectGoodsNum!=allGoodsNum}}"></icon>
+        <icon class="radio_2" size="24" type="success_circle" wx:if="{{selectGoodsNum==allGoodsNum}}"></icon>
+        <view class="all">全选</view>
+    </view>
+    <view class="text">
+        <text class="t1">合计：</text>
+        <text class="t2">￥{{countTotal}}</text>
+        <text class="t3">不含运费</text>
+    </view>
+    <view class="button">
+        <view bindtap="gotoConfirm" class="but">结算</view>
+    </view>
+</view>

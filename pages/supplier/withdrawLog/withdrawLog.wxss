@@ -1,0 +1,44 @@
+page {
+    background: #fff;
+    padding-top: 87rrpx;
+}
+
+.customer .main {
+    border-top: 1rrpx solid #d9d9d9;
+}
+
+.customer .main .li {
+    flex-wrap: wrap;
+    display: flex;
+    box-sizing: border-box;
+    padding: 20rrpx 0;
+    margin: 0 20rrpx;
+    border-bottom: 1rrpx solid #d9d9d9;
+}
+
+.customer .main .li .text {
+    flex: 1;
+    padding-right: 20rrpx;
+}
+
+.customer .main .li .num {
+    min-width: 150rrpx;
+    text-align: right;
+}
+
+.customer .main .li .n1,.customer .main .li .t1 {
+    font-size: 28rrpx;
+    line-height: 50rrpx;
+    height: 50rrpx;
+    overflow: hidden;
+}
+
+.customer .main .li .n2,.customer .main .li .t2 {
+    font-size: 24rrpx;
+    color: #888;
+    line-height: 30rrpx;
+}
+
+.customer .main .li .n2 {
+    color: #f90;
+}

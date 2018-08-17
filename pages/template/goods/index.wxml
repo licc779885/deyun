@@ -1,0 +1,39 @@
+<template name="goods">
+    <view class="d-goodsList" style="background-color:{{params.bgcolor}}">
+        <view style="width:100%;border-bottom:1px slid #000;margin-left:15rpx; height:85rpx;line-height:85rpx;color:{{params.titlecolor}}" wx:if="{{params.showtitle==0}}">{{params.title}}</view>
+        <view class="main">
+            <view bindtap="goToDetail" class="li" id="{{item.goodid}}" style="width:{{params.style}}" wx:if="{{params.style!='hp'}}" wx:for="{{data}}">
+                <view style="position: relative;">
+                    <image class="img1" mode="widthFix" src="{{item.img}}"></image>
+                    <image mode="widthFix" src="https://www.yunzmall.com/addons/yun_shop/plugins/designer/assets/css/{{params.option}}.png" style="height: 50px; width: 50px;position: absolute;top: -3px;left: -3px;" wx:if="{{params.sales!=''}}"></image>
+                </view>
+                <view class="name">
+                    <text>{{item.name}}</text>
+                </view>
+                <view class="Price">
+                    <text class="s1" wx:if="{{params.price!=0}}">￥{{item.pricenow}}</text>
+                    <text class="s2" wx:if="{{params.price==1&&params.style!='33.3%'}}">￥{{item.priceold}}</text>
+                    <image mode="widthFix" src="https://www.yunzmall.com/addons/yun_shop/plugins/designer/assets/images/ico_{{params.buysub}}.png" style="width:30px;float:right;" wx:if="{{params.buysub!=''}}"></image>
+                </view>
+            </view>
+            <view bindtap="goToDetail" class="li hp-li" id="{{item.goodid}}" wx:if="{{params.style=='hp'}}" wx:for="{{data}}">
+                <view style="height: 80px; width: 80px;  background: #ddd;float: left;position: relative;top:-5px;">
+                    <image mode="widthFix" src="https://www.yunzmall.com/addons/yun_shop/plugins/designer/assets/css/{{params.option}}.png" style="height: 50px; width: 50px;position: absolute;top: -3px;left: -3px;" wx:if="{{params.sales!=''}}"></image>
+                    <image class="img1" mode="widthFix" src="{{item.img}}" style="height: 100%; width: 100%;"></image>
+                </view>
+                <view style="    height: 80px;background: #fff;padding-left: 5px;">
+                    <text class="hp-line">{{params.style}}{{item.name}}</text>
+                    <view class="Price" style="">
+                        <view style="float:left">
+                            <text class="s1" wx:if="{{params.price!=0}}">￥{{item.pricenow}}</text>
+                            <text class="s2" wx:if="{{params.price==1}}">￥{{item.priceold}}</text>
+                        </view>
+                        <view>
+                            <image mode="widthFix" src="https://www.yunzmall.com/addons/yun_shop/plugins/designer/assets/images/ico_{{params.buysub}}.png" style="width:30px;float:right;margin-top:5px;" wx:if="{{params.buysub!=''}}"></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

@@ -1,0 +1,3 @@
+<template name="line">
+    <view style="border-top-width:{{params.height}};border-top-style:{{params.style}};border-top-color:{{params.color}};"></view>
+</template>

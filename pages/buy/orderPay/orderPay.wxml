@@ -1,0 +1,34 @@
+<view class="inputBox">
+    <view class="li">
+        <view class="ll">
+            <text class="t1">账户余额</text>
+        </view>
+        <view class="rr">
+            <text class="t1">{{orderData.credit.current}}</text>
+            <text class="t1">元</text>
+        </view>
+    </view>
+    <view class="li">
+        <view class="ll">
+            <text class="t1">订单编号</text>
+        </view>
+        <view class="rr">
+            <text class="t1">{{orderData.order.ordersn}}</text>
+        </view>
+    </view>
+    <view class="li">
+        <view class="ll">
+            <text class="t1">支付金额</text>
+        </view>
+        <view class="rr">
+            <text class="t2">{{orderData.order.price}}</text>
+            <text class="t1">元</text>
+        </view>
+    </view>
+</view>
+<view class="b-btn-area credit">
+    <button bindtap="creditPay" wx:if="{{isShowCredit}}"  type="primary">余额支付</button>
+</view>
+<view class="b-btn-area" wx:if="{{isShowWexin}}">
+    <button bindtap="wxPay"  type="primary">微信支付</button>
+</view>

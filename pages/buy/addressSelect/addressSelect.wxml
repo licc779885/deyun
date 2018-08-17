@@ -1,0 +1,29 @@
+<import src="../../template/imageBe/imageBe.wxml"></import>
+<view class="addressList">
+    <view class="li" wx:for="{{addressListData}}">
+        <view bindtap="selectAddres" class="ll" data-id="{{item.id}}" wx:if="{{item.id==addres_id}}">
+            <icon class="radio" size="20" type="success_circle"></icon>
+        </view>
+        <view bindtap="selectAddres" class="cc" data-id="{{item.id}}">
+            <view class="hh">
+                <text class="t1">{{item.realname}}</text>
+                <text class="t2">{{item.mobile}}</text>
+            </view>
+            <view class="mm">
+                <text class="t10" wx:if="{{item.isdefault==1}}">默认</text>{{item.province+item.city+item.district+item.address}}</view>
+        </view>
+        <view class="rr">
+            <view bindtap="editAddress" class="handle edit" data-id="{{item.id}}">
+                <template is="imageBe" data="{{class:'icon icon2',imgName:'icon_edit.png'}}"></template>
+            </view>
+            <view bindtap="delAddress" class="handle del" data-id="{{item.id}}">
+                <template is="imageBe" data="{{class:'icon icon2',imgName:'icon_del.png'}}"></template>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="b-footerButton">
+    <view bindtap="_gotoAddressAdd" class="li button-other-red">
+        <text class="name">新增收货地址</text>
+    </view>
+</view>

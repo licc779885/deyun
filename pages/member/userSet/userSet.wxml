@@ -1,0 +1,21 @@
+<import src="../../template/tableCell/tableCell.wxml"></import>
+<import src="../../template/imageBe/imageBe.wxml"></import>
+<view class="b-br"></view>
+<view class="table-cells">
+    <template is="tableCell" data="{{...nickname}}"></template>
+    <template is="tableCell" data="{{...mobile}}"></template>
+</view>
+<view class="b-br"></view>
+<view class="table-cells">
+    <template is="tableCell" data="{{...weixin}}"></template>
+    <template is="tableCell" data="{{...alipay}}"></template>
+    <template is="tableCell" data="{{...alipayname}}"></template>
+</view>
+<view class="b-br"></view>
+<view class="table-cells">
+    <template is="tableCell" data="{{...realname}}"></template>
+    <template is="tableCell" data="{{...gender}}"></template>
+    <template is="tableCell" data="{{...address}}"></template>
+    <template is="tableCell" data="{{...birthday}}"></template>
+</view>
+<view class="b-br"></view>

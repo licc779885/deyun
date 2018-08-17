@@ -1,0 +1,135 @@
+<import src="../../template/imageBe/imageBe.wxml"></import>
+<form bindsubmit="gotoConfirm">
+    <view class="b-altText" wx:if="{{orderState==0}}">
+        <template is="imageBe" data="{{class:'',imgName:'icon_iconfontshuaxin.png'}}"></template>
+        <view class="te1">订单加载中</view>
+    </view>
+    <block wx:if="{{orderState==1}}">
+        <view bindtap="_gotoAddressSelect" class="address background-address" data-id="{{address_id}}" wx:if="{{address_id}}">
+            <view class="l">
+                <template is="imageBe" data="{{class:'icon icon2',imgName:'icon_dizhi.png'}}"></template>
+            </view>
+            <view class="c">
+                <view class="top">
+                    <view class="name">{{address_title}}:{{address_name}} {{address_mobile}}</view>
+                </view>
+                <view class="bottom">{{address_address}} </view>
+            </view>
+            <view class="r">
+                <template is="imageBe" data="{{class:'icon icon2',imgName:'arrowright.png'}}"></template>
+            </view>
+        </view>
+        <view bindtap="_gotoAddressAdd" class="address background-address" wx:if="{{!address_id}}">
+            <view class="l">
+                <template is="imageBe" data="{{class:'icon icon2',imgName:'icon_dizhi.png'}}"></template>
+            </view>
+            <view class="c">
+                <view class="top">
+                    <view class="name">添加收货地址</view>
+                </view>
+            </view>
+            <view class="r">
+                <template is="imageBe" data="{{class:'icon icon2',imgName:'arrowright.png'}}"></template>
+            </view>
+        </view>
+        <view class="b-br"></view>
+        <block wx:for="{{order_all}}">
+            <view class="goods">
+                <view class="head">商品列表</view>
+                <view class="ul">
+                    <view class="li" wx:for="{{item.goods}}">
+                        <image backgroundSize="cover" src="{{item.thumb}}"></image>
+                        <view class="text">
+                            <view class="t1">{{item.title}}</view>
+                            <view class="t2">规格：{{item.optiontitle}}</view>
+                        </view>
+                        <view class="num">
+                            <view class="n1">￥{{item.marketprice}}</view>
+                            <view class="n2">x{{item.total}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="input">
+                    <input name="msg{{index}}" placeholder="选填：给卖家留言" placeholderClass="input-block-placeholder"></input>
+                </view>
+                <view class="bottom">
+          合计：
+          <text class="s2">￥{{item.goodsprice}}</text>
+                </view>
+            </view>
+            <view class="inputBox">
+                <view class="li">
+                    <view class="ll">
+                        <text class="t1">+运费</text>
+                    </view>
+                    <view class="rr">
+                        <text class="t1">￥</text>{{item.dispatch_price}}
+                    </view>
+                </view>
+                <view class="li">
+                    <view class="ll">
+                        <text class="t1">商品优惠</text>
+                    </view>
+                    <view class="rr">
+                        <text class="t1">-￥</text>{{item.discountprice}}
+                    </view>
+                </view>
+                <view class="li" wx:if="{{saleset.showenough}}}">
+                    <view >
+                        -单笔满 <text class="red">{{saleset.enoughmoney}}</text>元 立减 -￥<text class="red">{{saleset.enoughdeduct}}</text>
+                    </view>
+                </view>
+                <view class="li" wx:if="{{item.discount.deduction.length>0}}" wx:for="{{item.discount.deduction}}" wx:for-item="d">
+                    <view class="ll">
+                        <text class="t1">{{d.value}}{{d.name}}</text>
+                        <text class="t2">{{d.price}}</text>
+                        <text class="t1">元</text>
+                    </view>
+                    <view class="rr">
+                        <switch bindchange="switch2deductcredit2" data-deduction="{{d}}" data-item="{{item}}" data-value="{{d.price}}" name="deductcredit2{{index}}"></switch>
+                    </view>
+                </view>
+                <block wx:if="{{item.couponcount>0}}">
+                    <navigator class="li" url="../coupon/coupon?op=query&money={{item.goodsprice}}&type=0&supplier_uid={{item.supplier_uid}}&goodsid=&cartids={{cartids}}" >
+                        <view class="ll">
+                            <text class="t1">{{item.couponname?'我选择了 '+item.couponname:'优惠券'}}</text>
+                        </view>
+                        <view class="rr">
+                            <text class="t1 red">{{item.couponcount}}</text>
+                        </view>
+                        <template is="imageBe" data="{{class:'icon',imgName:'arrowright.png'}}"></template>
+                    </navigator>
+                </block>
+                <block wx:else>
+                    <view class="li"  >
+                        <view class="ll">
+                            <text class="t1">没有符合条件的优惠券~</text>
+                        </view>
+                        <view class="rr">
+                            <text class="t1 red">0</text>
+                        </view>
+                        <template is="imageBe" data="{{class:'icon',imgName:'arrowright.png'}}"></template>
+                    </view>
+                </block>
+                <view class="li">
+                    <view class="ll">
+                        <text class="t1">商品小计</text>
+                    </view>
+                    <view class="rr">
+                        <text class="t1">￥</text>{{item.realprice}}
+          </view>
+                </view>
+            </view>
+            <view class="b-br"></view>
+        </block>
+    </block>
+    <view class="footer" wx:if="{{orderState==1}}">
+        <view class="text">
+            <text class="t1">合计：</text>
+            <text class="t2">￥{{realprice_totaler}}</text>
+        </view>
+        <view class="button">
+            <button class="but" formType="submit" type="primary">结算</button>
+        </view>
+    </view>
+</form>

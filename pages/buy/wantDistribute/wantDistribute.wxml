@@ -1,0 +1,37 @@
+<view class="box">
+    <view class="li">
+        <view class="li1">000.00元</view>
+        <view class="li2">分销佣金</view>
+    </view>
+    <view class="li border">
+        <view class="li1">000件</view>
+        <view class="li2">已销售</view>
+    </view>
+</view>
+<image class="images" mode="widthFix" src="http://demo.yunzshop.com/addons/dyun/data/poster/3/c0a053a5d4c5023ecef9e400d133dff7.jpg"></image>
+<view class="info">
+    <view class="title">
+        如何赚钱
+    </view>
+    <view class="con">
+        <view class="line">
+            <view class="t1">第一步</view>
+            <view class="t2">
+                <view class="t3">转发商品链接或商品图片给微信好友；</view>
+            </view>
+        </view>
+        <view class="line">
+            <view class="t1">第二步</view>
+            <view class="t2">
+                <view class="t3">从您转发的链接或图片进入商城的好友，如果您的好友下单，系统将自动锁定成为您的客户, 他们在微信商城中购买任何商品，您都可以获得分销佣金；</view>
+            </view>
+        </view>
+        <view class="line">
+            <view class="t1">第三步</view>
+            <view class="t2">
+                <view class="t3">您可以在分销中心查看【我的团队】和【分销订单】，好友确认收货后佣金方可提现。</view>
+            </view>
+        </view>
+    </view>
+    <view class="info2">说明：分享后会带有独有的推荐码，您的好友访问之后，系统会自动检测并记录客户关系。如果您的好友已被其他人抢先发展成了客户，他就不能成为您的客户，以最早发展成为客户为准。</view>
+</view>

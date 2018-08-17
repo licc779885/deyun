@@ -1,0 +1,3 @@
+<template name="imageBe">
+    <image backgroundSize="cover" class="{{class}}" mode="aspectFit" src="/image/{{imgName}}"></image>
+</template>

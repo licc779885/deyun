@@ -1,0 +1,106 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/tologin/tologin",
+    "pages/search/search",
+    "pages/detail/detail",
+    "pages/category/category",
+    "pages/commission/commission",
+    "pages/commission/distribution_commission_state/distribution_commission_state",
+    "pages/commission/customer/customer",
+    "pages/commission/order_commission/order_commission",
+    "pages/commission/detail_commission/detail_commission",
+    "pages/commission/team/team",
+    "pages/commission/balance/balance",
+    "pages/commission/wantDistribute/wantDistribute",
+    "pages/bonus/bonus",
+    "pages/bonus/yongjin_bonus/yongjin_bonus",
+    "pages/bonus/order_bonus/order_bonus",
+    "pages/bonus/detail_bonus/detail_bonus",
+    "pages/bonus/team/team",
+    "pages/buy/cart/cart",
+    "pages/buy/myOrder/myOrder",
+    "pages/buy/goodsList/goodsList",
+    "pages/buy/wantDistribute/wantDistribute",
+    "pages/buy/takePlace/takePlace",
+    "pages/buy/orderPay/orderPay",
+    "pages/buy/payanother/payanother",
+    "pages/buy/payanotherDetail/payanotherDetail",
+    "pages/buy/success/success",
+    "pages/buy/coupon/coupon",
+    "pages/member/index/index",
+    "pages/member/myOrder/myOrder",
+    "pages/member/myOrder/orderRefund/orderRefund",
+    "pages/member/myOrder/comment/comment",
+    "pages/member/myOrder/view_logistics/view_logistics",
+    "pages/member/myOrder/detail/detail",
+    "pages/member/userSet/userSet",
+    "pages/member/userSetData/userSetData",
+    "pages/member/addressList/addressList",
+    "pages/buy/addressSelect/addressSelect",
+    "pages/member/addressAdd/addressAdd",
+    "pages/member/collection/collection",
+    "pages/member/footprint/footprint",
+    "pages/member/allReturn/allReturn",
+    "pages/member/withdraw/withdraw",
+    "pages/member/balance/balance",
+    "pages/member/balanceLog/balanceLog",
+    "pages/member/balanceDetail/balanceDetail",
+    "pages/member/coupon/coupon",
+    "pages/supplier/apply/apply",
+    "pages/supplier/list/list",
+    "pages/supplier/center/center",
+    "pages/supplier/withdrawLog/withdrawLog",
+    "pages/channel/apply/apply",
+    "pages/template/tableCell/tableCell",
+    "pages/template/imageBe/imageBe",
+    "pages/template/radioLw/radioLw",
+    "pages/template/evaluate/evaluate",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#f8f8f8",
+    "navigationBarTitleText": "德云",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#888",
+    "selectedColor": "#414141",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/image/1.png",
+        "selectedIconPath": "/image/11.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "/image/22.png",
+        "selectedIconPath": "/image/2.png"
+      },
+      {
+        "pagePath": "pages/commission/commission",
+        "text": "推广",
+        "iconPath": "/image/3.png",
+        "selectedIconPath": "/image/33.png"
+      },
+      {
+        "pagePath": "pages/buy/cart/cart",
+        "text": "购物车",
+        "iconPath": "/image/4.png",
+        "selectedIconPath": "/image/44.png"
+      },
+      {
+        "pagePath": "pages/member/index/index",
+        "text": "我的",
+        "iconPath": "/image/5.png",
+        "selectedIconPath": "/image/55.png"
+      }
+    ]
+  }
+}

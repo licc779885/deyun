@@ -1,0 +1,643 @@
+page {
+    background: #f8f8f8;
+    padding-top: 85rpx;
+    padding-bottom: 89rpx;
+}
+
+.nav {
+    position: fixed;
+    top: 0rpx;
+    left: 0rpx;
+    width: 751rpx;
+    z-index: 10;
+    border-bottom: 1rpx solid #d9d9d9;
+    background: #fff;
+    flex-wrap: wrap;
+    display: flex;
+    margin-left: -1rpx;
+    height: 80rpx;
+    overflow: hidden;
+}
+
+.nav .li {
+    padding: 25rpx 0rpx;
+    flex: 1;
+    height: 60rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.nav .li.true {
+    color: #F55955;
+}
+
+.nav .li .b {
+    border-left: 1rpx solid #d9d9d9;
+    box-sizing: border-box;
+    height: 30rpx;
+    line-height: 30rpx;
+    text-align: center;
+}
+
+.goods .swiper image {
+    width: 750rpx;
+    display: block;
+    height: 750rpx;
+}
+
+.goods swiper {
+    height: 750rpx;
+}
+
+.base {
+    background: #fff;
+    padding-top: 20rpx;
+    border-bottom: 1rpx solid #d9d9d9;
+}
+
+.base .info {
+    flex-wrap: wrap;
+    border-bottom: 1rpx solid #d9d9d9;
+    padding-bottom:15rpx;
+    align-items: center;
+    display: flex;
+    margin: 0rpx 18rpx;
+}
+
+.base .info .name {
+    width: 100%;
+    line-height: 38rpx;
+    font-size: 25rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: justify;
+}
+
+.base .info .sub {
+    width: 251rpx;
+    padding-left: 20rpx;
+    box-sizing: border-box;
+    border-left: 1rpx solid #d9d9d9;
+    align-items: right;
+    text-align: right;
+    position: absolute;
+    right: 5rpx;
+    display: flex;
+    margin-left: -1rpx;
+}
+
+.base .info .sub .but {
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    background: #FFAC2E;
+    height: 88rpx;
+    color: #fff;
+    border-radius: 8rpx;
+    line-height: 88rpx;
+}
+
+.base .info .sub image {
+    width: 30rpx;
+    height: 30rpx;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.base .info .sub text {
+    vertical-align: middle;
+    margin-left: 10rpx;
+    font-size: 28rpx;
+}
+
+.base .price {
+    padding: 20rpx 0rpx;
+    flex-wrap: wrap;
+    display: flex;
+    margin: 0rpx 20rpx;
+    line-height: 40rpx;
+}
+
+.base .price .l {
+    flex: 1;
+}
+
+.base .price .l text {
+    color: #F55955;
+    font-size: 32rpx;
+}
+
+.base .price .r {
+    flex: 1;
+    text-align: right;
+    font-size:25rpx;
+}
+
+.base .price .r text {
+    margin-left: 20rpx;
+    color: #666;
+}
+
+.base .other {
+    padding: 20rpx 0rpx;
+    flex-wrap: wrap;
+    display: flex;
+    margin: 0rpx 20rpx;
+    line-height: 40rpx;
+}
+
+.base .other image {
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 20rpx;
+    vertical-align: middle;
+}
+
+.base .other .t1 {
+    line-height: 30rpx;
+    vertical-align: middle;
+}
+
+.base .other .t2 {
+    color: #FFAC2E;
+    padding: 0rpx 10rpx;
+}
+
+.pingjia {
+    background: #fff;
+}
+
+.pingjia .main {
+    position: relative;
+}
+
+.pingjia .sub {
+    margin: 0rpx 20rpx;
+}
+
+.pingjia .sub.border {
+    border-top: 1rpx solid #d9d9d9;
+}
+
+.pingjia .head {
+    display: flex;
+    flex-flow: nowrap;
+    padding: 20rpx 0rpx 0rpx 0rpx;
+}
+
+.pingjia .head .ll {
+    width: 400rpx;
+}
+
+.pingjia .head .ll image {
+    height: 30rpx;
+    width: 30rpx;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 100%;
+}
+
+.pingjia .head .ll text {
+    line-height: 30rpx;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10rpx;
+}
+
+.pingjia .head .rr {
+    width: 350rpx;
+    text-align: right;
+    line-height: 40rpx;
+    color: #888;
+}
+
+.pingjia .text {
+    padding: 0rpx 0rpx 20rpx 0rpx;
+    line-height: 35rpx;
+    text-align: justify;
+}
+
+.pingjia .img {
+    margin-left: -20rpx;
+}
+
+.pingjia .img image {
+    height: 100rpx;
+    width: 100rpx;
+    display: inline-table;
+    margin-left: 20rpx;
+    padding-bottom: 20rpx;
+}
+
+.boxHead {
+    display: flex;
+    background: #fff;
+    flex-wrap: wrap;
+    height: 88rpx;
+    padding: 0rpx 20rpx;
+    border-top: 1rpx solid #D9D9D9;
+}
+
+.boxHead .name,.boxHead .title {
+    flex: 5;
+    line-height: 38rpx;
+    padding: 25rpx 0rpx;
+}
+
+.boxHead .name {
+    color: #414141;
+    font-size: 28rpx;
+}
+
+.boxHead .title {
+    text-align: right;
+    color: #888;
+}
+
+.boxHead .icon,.boxHead .arrow {
+    flex: 1;
+    padding: 25rpx 0rpx;
+}
+
+.boxHead .icon {
+    text-align: left;
+}
+
+.boxHead .arrow {
+    text-align: right;
+}
+
+.boxHead .icon image {
+    height: 38rpx;
+    width: 38rpx;
+}
+
+.boxHead .arrow image {
+    height: 38rpx;
+    width: 38rpx;
+}
+
+.detail {
+    width: 750rpx;
+    overflow: hidden;
+}
+
+.comment {
+    padding-top: 20rpx;
+}
+
+.comment .sub {
+    border-bottom: 1rpx solid #d9d9d9;
+    border-top: 1rpx solid #d9d9d9;
+    margin-bottom: 20rpx;
+    background: #fff;
+}
+
+.comment .head {
+    margin: 0rpx 20rpx;
+    display: flex;
+    flex-flow: nowrap;
+    border-bottom: 1rpx solid #d9d9d9;
+    padding: 20rpx 0rpx;
+}
+
+.comment .head .ll {
+    width: 400rpx;
+}
+
+.comment .head .ll image {
+    height: 40rpx;
+    width: 40rpx;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 100%;
+}
+
+.comment .head .ll text {
+    line-height: 40rpx;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10rpx;
+}
+
+.comment .head .rr {
+    width: 350rpx;
+    text-align: right;
+    line-height: 40rpx;
+    color: #888;
+}
+
+.comment .xing {
+    padding: 20rpx 20rpx;
+    display: flex;
+    flex-flow: nowrap;
+}
+
+.comment .xing .li {
+    height: 30rpx;
+    width: 30rpx;
+}
+
+.comment .xing .li image {
+    height: 30rpx;
+    width: 30rpx;
+}
+
+.comment .text {
+    padding: 0rpx 20rpx 20rpx 20rpx;
+    line-height: 35rpx;
+    text-align: justify;
+}
+
+.comment .img {
+    padding: 0rpx 20rpx 20rpx 0rpx;
+}
+
+.comment .img image {
+    height: 100rpx;
+    width: 100rpx;
+    display: inline-table;
+    margin-left: 20rpx;
+}
+
+.comment .huifu {
+    background: #f8f8f8;
+    margin: 0rpx 20rpx 20rpx 20rpx;
+    border-radius: 8rpx;
+}
+
+.comment .huifu .h {
+    border-bottom: 1rpx solid #d9d9d9;
+    display: flex;
+    flex-flow: nowrap;
+    padding: 10rpx 0rpx;
+    margin: 0rpx 20rpx;
+    line-height: 40rpx;
+}
+
+.comment .huifu .m {
+    line-height: 35rpx;
+    padding: 20rpx 20rpx 20rpx 20rpx;
+    text-align: justify;
+}
+
+.comment .huifu .ll {
+    flex: 1;
+}
+
+.comment .huifu .rr {
+    flex: 1;
+    text-align: right;
+}
+
+.footer {
+    position: fixed;
+    bottom: -1rpx;
+    left: -1rpx;
+    width: 752rpx;
+    height: 88rpx;
+    background: #fff;
+    border-top: 1rpx solid #d9d9d9;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer .cell-icon,.footer .cell-button {
+    text-align: center;
+    height: 88rpx;
+    box-sizing: border-box;
+}
+
+.footer .cell-icon {
+    width: 98rpx;
+    border-left: 1rpx solid #d9d9d9;
+    padding: 4rpx 0rpx;
+    height: 88rpx;
+}
+
+.footer .cell-icon .icon {
+    width: 30rpx;
+    height: 30rpx;
+    margin: 8rpx auto;
+    display: none;
+}
+
+.footer .cell-icon .icon1 {
+    display: block;
+}
+
+.footer .cell-icon.in .icon2 {
+    display: block;
+}
+
+.footer .cell-icon.in .icon1 {
+    display: none;
+}
+
+.footer .cell-icon .name {
+    font-size: 20rpx;
+    color: #888;
+    line-height: 25rpx;
+}
+
+.footer .cell-button {
+    flex: 1;
+    line-height: 88rpx;
+    font-size: 25rpx;
+}
+
+.b-detail-info {
+    z-index: 101;
+    width: 750rpx;
+    background: #fff;
+    position: fixed;
+    bottom: 0rpx;
+    font-size: 24rpx;
+    transform: translateY(1200rpx);
+    transition: all .5s;
+    overflow: unset;
+}
+
+.b-detail-info.true {
+    transform: translateY(0rpx);
+}
+
+.b-detail-info .head {
+    padding-bottom: 0rpx;
+    border-bottom: 1rpx solid #d9d9d9;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.b-detail-info .head .img {
+    position: absolute;
+    top: -50rpx;
+    left: 20rpx;
+    border-radius: 4rpx;
+    background: #fff;
+    border: 8rpx solid #fff;
+    box-shadow: 0rpx 0rpx 0rpx 2rpx rgba(0,0,0,0.1);
+}
+
+.b-detail-info .head .img image {
+    display: block;
+    height: 200rpx;
+    width: 200rpx;
+    border-radius: 2rpx;
+}
+
+.b-detail-info .head .text {
+    margin-left: 240rpx;
+    overflow: hidden;
+    padding: 20rpx 20rpx;
+    box-sizing: border-box;
+    min-height: 200rpx;
+    font-size: 24rpx;
+}
+
+.b-detail-info .head .text .p1 {
+    color: #F55955;
+    font-size: 36rpx;
+    line-height: 50rpx;
+}
+
+.b-detail-info .head .text .p2 {
+    line-height: 50rpx;
+}
+
+.b-detail-info .head .text .p3 {
+    line-height: 30rpx;
+    padding: 10rpx 0rpx;
+}
+
+.b-detail-info .main {
+    overflow: hidden;
+}
+
+.b-detail-info .main .ul {
+    max-height: 600rpx;
+    overflow: auto;
+    width: 710rpx;
+    margin: -1rpx 20rpx 0rpx 20rpx;
+}
+
+.b-detail-info .main .ul .li {
+    width: 100%;
+    padding: 10rpx 0rpx;
+    border-top: 1rpx solid #d9d9d9;
+}
+
+.b-detail-info .main .ul .li::first-child {
+    border-top: 0rpx solid #d9d9d9;
+}
+
+.b-detail-info .main .name {
+    padding: 10rpx 0rpx;
+}
+
+.b-detail-info .main .text {
+    padding: 10rpx 0rpx;
+    margin-left: -20rpx;
+}
+
+.b-detail-info .main .text text {
+    background: #f0f0f0;
+    color: #414141;
+    display: inline-block;
+    line-height: 20rpx;
+    padding: 14rpx 20rpx;
+    border-radius: 3rpx;
+    margin: 8rpx 0rpx 8rpx 20rpx;
+    font-size: 24rpx;
+}
+
+.b-detail-info .main .text text.true {
+    color: #fff;
+    background: #F55955;
+}
+
+.b-detail-info .main .num {
+    width: 100%;
+    height: 62rpx;
+    position: relative;
+    margin: 10rpx 0rpx;
+}
+
+.b-detail-info .main .num .left {
+    line-height: 60rpx;
+}
+
+.b-detail-info .main .num .left .s1 {
+    color: #888;
+    font-size: 24rpx;
+}
+
+.b-detail-info .main .num .right {
+    position: absolute;
+    top: 0rpx;
+    right: 2rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.b-detail-info .main .num .btn,.b-detail-info .main .num input {
+    height: 60rpx;
+    line-height: 58rpx;
+    box-sizing: border-box;
+    appearance: none;
+    width: 80rpx;
+    border-radius: 0rpx;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0rpx;
+}
+
+.b-detail-info .main .num .btn {
+    background: #f8f8f8;
+    color: #555;
+    font-size: 28rpx;
+    border: 1rpx solid #d9d9d9;
+}
+
+.b-detail-info .main .num .btn.on {
+    color: #aaa;
+}
+
+.b-detail-info .main .num input {
+    background: #fff;
+    border-top: 1rpx solid #d9d9d9;
+    border-bottom: 1rpx solid #d9d9d9;
+}
+
+.b-detail-info .button {
+    width: 750rpx;
+    line-height: 88rpx;
+    text-align: center;
+    font-size: 28rpx;
+}
+
+.params .li {
+    display: flex;
+    flex-flow: nowrap;
+    align-items: center;
+    border-bottom: 1rpx solid #d9d9d9;
+    line-height: 40rpx;
+    background: #fff;
+}
+
+.params .ll {
+    flex: 1;
+    box-sizing: border-box;
+    background: #fafafa;
+    padding: 20rpx;
+    border-right: 1rpx solid #d9d9d9;
+}
+
+.params .rr {
+    flex: 3;
+    border-left: 1rpx solid #d9d9d9;
+    margin-left: -1rpx;
+    padding: 20rpx;
+    box-sizing: border-box;
+}

@@ -1,0 +1,161 @@
+<import src="/pages/template/imageBe/imageBe.wxml"></import>
+<view class="b-altText" wx:if="{{!ready}}">
+    <template is="imageBe" data="{{class:'',imgName:'icon_iconfontshuaxin.png'}}"></template>
+    <view class="te1">数据加载中...</view>
+</view>
+<view class="container" wx:if="{{ready}}">
+    <view class="nav" wx:if="{{ready}}">
+        <view bindtap="animateType" class="li {{showGoods}}" data-type="showGoods">
+            <view class="b">商品</view>
+        </view>
+        <view bindtap="animateType" class="li {{showDetail}}" data-type="showDetail">
+            <view class="b">详情</view>
+        </view>
+        <view bindtap="animateType" class="li {{showParameter}}" data-type="showParameter">
+            <view class="b">参数</view>
+        </view>
+        <view bindtap="animateType" class="li {{showComment}}" data-type="showComment">
+            <view class="b">评价</view>
+        </view>
+    </view>
+    <block wx:if="{{showGoods}}">
+        <import src="../../wxParse/wxParse.wxml"></import>
+        <view class="goods">
+            <view class="swiper">
+                <swiper autoplay="{{autoplay}}" duration="{{duration}}" indicatorDots="{{indicatorDots}}" interval="{{interval}}" vertical="{{vertical}}">
+                    <swiper-item wx:for="{{bannerData}}">
+                        <image class="slide-image" src="{{item}}"></image>
+                    </swiper-item>
+                </swiper>
+            </view>
+            <view class="base">
+                <view class="info">
+                    <view class="name">{{goodsData.title}}</view>
+                </view>
+                <view class="price">
+                    <view class="l">
+                        <text>￥{{goodsData.marketprice}}</text>
+                    </view>
+                    <view class="r">
+                        <text>库存:{{goodsData.total}}</text>
+                        <text>销量:{{goodsData.userbuy}}</text>
+                    </view>
+                </view>
+            </view>
+            <block wx:if="{{notbuy}}">
+                <view class="notbuy">
+                    {{nothtml}}
+                </view>
+            </block>
+            <view class="detail">
+                <template is="wxParse" data="{{wxParseData:article.nodes}}"></template>
+            </view>
+        </view>
+    </block>
+    <block wx:if="{{showDetail}}">
+        <import src="../../wxParse/wxParse.wxml"></import>
+        <view class="detail">
+            <template is="wxParse" data="{{wxParseData:article.nodes}}"></template>
+        </view>
+    </block>
+    <view class="params" wx:if="{{showParameter}}">
+        <view class="li" wx:for="{{params}}">
+            <view class="ll">{{item.title}}</view>
+            <view class="rr">{{item.value}}</view>
+        </view>
+    </view>
+    <block wx:if="{{showComment}}">
+        <view class="b-altText" wx:if="{{commentDataState==0}}">
+            <template is="imageBe" data="{{class:'',imgName:'icon_iconfontshuaxin.png'}}"></template>
+            <view class="te1">数据加载中...</view>
+        </view>
+        <view class="b-altText" wx:if="{{commentDataState==1}}">
+            <template is="imageBe" data="{{class:'',imgName:'icon_void.png'}}"></template>
+            <view class="te1">当前商品没有任何评价</view>
+        </view>
+        <view class="comment" wx:if="{{commentDataState==2}}">
+            <view class="sub" wx:for="{{commentData}}">
+                <view class="head">
+                    <view class="ll">
+                        <image src="{{item.head_img_url}}"></image>
+                        <text>{{item.nick_name}}</text>
+                    </view>
+                    <view class="rr">{{item.created_at}}</view>
+                </view>
+                <view class="xing">
+                    <view class="li" wx:for="{{item.level.list}}">
+                        <template is="imageBe" data="{{class:'icon item==1',imgName:'icon_collection.png'}}" wx:if="{{item==1}}"></template>
+                        <template is="imageBe" data="{{class:'icon item==1',imgName:'icon_collection_out.png'}}" wx:if="{{item==0}}"></template>
+                    </view>
+                </view>
+                <view class="text">{{item.content}}</view>
+            </view>
+        </view>
+    </block>
+</view>
+<view class="footer" wx:if="{{ready}}">
+    <view bindtap="setCollect" class="cell-icon in" wx:if="{{!collection}}">
+        <template is="imageBe" data="{{class:'icon icon2',imgName:'icon_collection_out.png'}}"></template>
+        <view class="name">收藏</view>
+    </view>
+    <view class="cell-icon" wx:if="{{collection}}">
+        <template is="imageBe" data="{{class:'icon icon1',imgName:'icon_collection.png'}}"></template>
+        <view class="name">已收藏</view>
+    </view>
+    <view bindtap="goCart" class="cell-icon">
+        <template is="imageBe" data="{{class:'icon icon1',imgName:'icon_cart_detail.png'}}"></template>
+        <template is="imageBe" data="{{class:'icon icon2',imgName:'icon_order.png'}}"></template>
+        <view class="name">购物车</view>
+    </view>
+    <view bindtap="openAddCart" class="cell-button button-other-orage" wx:if="{{!isverify}}">加入购物车</view>
+    <view bindtap="openBuy" class="cell-button button-other-red">立即购买</view>
+</view>
+<view bindtap="closeDetailInfo" class="b-mask {{detailInfo}}"></view>
+<view class="b-detail-info {{detailInfo}}">
+    <view class="head">
+        <view class="img">
+            <image src="{{homeImg}}"></image>
+        </view>
+        <view class="text">
+            <view class="p1">{{price}}</view>
+            <view class="p2">库存{{stock}}件</view>
+            <view class="p3" id="selectSpecs">
+                <block wx:if="{{!optionsState}}">未选中规格</block>
+                <block wx:if="{{optionsState}}">
+          已选择：
+          <block wx:if="{{item.state}}" wx:for="{{specsData}}">
+                        <block wx:if="{{item.state}}" wx:for="{{item.specitem}}">
+                {{item.title}}
+              </block>
+            {{item.title}},
+          </block>
+                </block>
+            </view>
+        </view>
+    </view>
+    <view class="main">
+        <view class="ul">
+            <view class="li" wx:for="{{specsData}}">
+                <view class="name">{{item.title}}</view>
+                <view class="text">{{item.specitem}}
+                    <text bindtap="selectSpecs" class="{{item.state}}" data-id="{{item.specid}}" data-specid="{{item.id}}" wx:for="{{item.items}}">{{item.title}}</text>
+                </view>
+            </view>
+            <view class="li">
+                <view class="num">
+                    <view class="left">
+            数量
+
+            </view>
+                    <view class="right">
+                        <view bindtap="removeGoodsNum" class="btn">-</view>
+                        <input bindinput="inputGoodsNum" class="input1" name="name" placeholderStyle="" type="number" value="{{buyNum}}"></input>
+                        <view bindtap="addGoodsNum" class="btn">+</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view bindtap="toAddCart" class="button button-other-orage {{submitTitle.state}}" data-disabled="{{submitTitle.state}}" wx:if="{{buyType=='addCart'}}">{{submitTitle.title}}</view>
+    <view bindtap="toBuy" class="button button-other-red {{submitTitle.state}}" data-disabled="{{submitTitle.state}}" wx:if="{{buyType=='buy'}}">{{submitTitle.title}}</view>
+</view>

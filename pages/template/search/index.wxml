@@ -1,0 +1,9 @@
+<template name="search">
+    <navigator class="b-search" hoverClass="other-navigator-hover" style="background-color:{{params.bgcolor}};" url="../search/search">
+        <view class="main" style="background-color:#fff;border:1px solid {{params.bordercolor}};">
+            <icon size="12" type="search" wx:if="{{params.style=='style1'}}"></icon>
+            <text class="input1">{{params.placeholder}}</text>
+            <icon size="12" type="search" wx:if="{{params.style=='style2'}}"></icon>
+        </view>
+    </navigator>
+</template>

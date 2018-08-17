@@ -1,0 +1,40 @@
+<import src="../../template/imageBe/imageBe.wxml"></import>
+<view class="b-altText" wx:if="{{state==0}}">
+    <template is="imageBe" data="{{class:'',imgName:'icon_iconfontshuaxin.png'}}"></template>
+    <view class="te1">加载中...</view>
+</view>
+<view class="b-altText" wx:if="{{state==1}}">
+    <template is="imageBe" data="{{class:'',imgName:'icon_void.png'}}"></template>
+    <view class="te1">您还没有设置收货地址</view>
+</view>
+<view class="addressList" wx:if="{{state==2}}">
+    <radio-group bindchange="radioChange" class="radio-group">
+        <view class="li" wx:for="{{addressListData}}">
+            <view class="hh">
+                <text class="t1">{{item.realname}}</text>
+                <text class="t2">{{item.mobile}}</text>
+            </view>
+            <view class="mm">{{item.province+item.city+item.area+item.address}}</view>
+            <view class="fn">
+                <view bindtap="defaultAddress" class="radio {{item.isdefault==1}}" data-id="{{item.id}}">
+                    <icon class="radio_1" size="20" type="circle"></icon>
+                    <icon class="radio_2" size="20" type="success_circle"></icon>
+                    <text>设为默认</text>
+                </view>
+                <view bindtap="editAddress" class="handle edit" data-id="{{item.id}}">
+                    <template is="imageBe" data="{{class:'icon icon2',imgName:'icon_edit.png'}}"></template>
+                    <text>编辑</text>
+                </view>
+                <view bindtap="delAddress" class="handle del" data-id="{{item.id}}">
+                    <template is="imageBe" data="{{class:'icon icon2',imgName:'icon_del.png'}}"></template>
+                    <text>删除</text>
+                </view>
+            </view>
+        </view>
+    </radio-group>
+</view>
+<view class="b-footerButton">
+    <view bindtap="_gotoAddressAdd" class="li button-other-red">
+        <text class="name">新增收货地址</text>
+    </view>
+</view>

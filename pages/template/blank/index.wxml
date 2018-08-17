@@ -1,0 +1,3 @@
+<template name="blank">
+    <view style="height:{{params.height}};background-color:{{params.bgcolor}}"></view>
+</template>
